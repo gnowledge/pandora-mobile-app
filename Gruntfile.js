@@ -137,6 +137,17 @@ module.exports = function (grunt) {
                 dest: 'build'
             }
         },
+        handlebars: {
+            compile: {
+                files: {
+                    "app/scripts/templates.js": "app/scripts/templates/*.html"
+                }
+            },
+            options: {
+                amd: true,
+                namespace: "JST"
+            }
+        },
         usemin: {
             html: ['build/{,*/}*.html'],
             css: ['build/styles/{,*/}*.css'],
