@@ -1,5 +1,6 @@
 // Generated on 2013-12-23 using generator-maryo 0.1.6
 'use strict';
+
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
