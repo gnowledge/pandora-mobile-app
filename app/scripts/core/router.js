@@ -5,8 +5,9 @@ define([
 
 function(Marionette, Controller) {
     var appRoutes = {
-        '': 'home'
-    }
+        '': 'home',
+        'foo/:id': 'foo'
+    };
 
     var router = Marionette.AppRouter.extend({
         controller: Controller,

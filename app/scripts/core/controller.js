@@ -37,6 +37,10 @@ function($, require, Backbone, HomeView, api) {
                 var view = new HomeView();
                 app.content.show(view);
             });    
-        }   
+        },
+        'foo': function(id) {
+            alert(id);
+            console.log("i am the foo route");
+        }  
     }
 });
