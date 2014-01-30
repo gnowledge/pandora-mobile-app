@@ -24,6 +24,16 @@ function($, settings) {
             // })
             return $xhr;
         };
+
+        this.getVideo=function(id) {
+            var data= {
+                'id':id
+            };
+            var action='get';
+            var $xhr = this.q(action, data);
+            return $xhr;
+        }
+
     };
     console.log("api helper", ApiHelper);
     //return {'hello': 'hi'};
