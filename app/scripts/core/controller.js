@@ -38,9 +38,25 @@ function($, require, Backbone, HomeView, api) {
                 app.content.show(view);
             });    
         },
-        'foo': function(id) {
-            alert(id);
-            console.log("i am the foo route");
-        }  
+        'video': function(id, view){
+            console.log(id,view);
+            var $xhr = api.getVideo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/video',
+                    'views/videoInfo',
+                    'app'
+                ], function(Video, VideoInfoView, app) {
+                    var video = new Video(response.data);
+                    console.log("our model", video);
+                    var view = new VideoInfoView({
+                        model: video
+                    });
+                    console.log("view", view);
+                    app.content.show(view);     
+                });
+            })
+        }
+    
     }
 });
