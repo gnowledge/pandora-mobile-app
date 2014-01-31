@@ -28,11 +28,12 @@ module.exports = function (grunt) {
             livereload: {
                 files: [
                     'app/*.html',
+                    'app/scripts/templates/*.html',
                     '{.tmp,app}/styles/{,*/}*.css',
                     '{.tmp,app}/scripts/{,*/}*.js',
                     'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ],
-                tasks: ['livereload']
+                tasks: ['livereload', 'handlebars']
             }
         },
         connect: {
