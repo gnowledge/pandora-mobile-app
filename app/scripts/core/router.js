@@ -6,7 +6,8 @@ define([
 function(Marionette, Controller) {
     var appRoutes = {
         '': 'home',
-        'video/:id/:view': 'video'
+        'video/:id/:view': 'video',
+        'video/:ids/:views': 'video',
     };
 
     var router = Marionette.AppRouter.extend({
