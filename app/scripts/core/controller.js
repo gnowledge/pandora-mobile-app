@@ -47,7 +47,7 @@ function($, require, Backbone, HomeView, api) {
                     'views/videoInfo',
                     'app'
                 ], function(Video, VideoInfoView, app) {
-                    var video = new Video(response.data);
+                    var video = new Video(response.data);                                         
                     console.log("our model", video);
                     var view = new VideoInfoView({
                         model: video
@@ -56,7 +56,35 @@ function($, require, Backbone, HomeView, api) {
                     app.content.show(view);     
                 });
             })
+        },
+
+
+
+        'video': function(ids, views){
+            console.log(ids,views);
+            var $xhr = api.getVideo(ids);
+            $xhr.done(function(response) {
+                require([
+                    'models/video',
+                    'views/videoInfo',
+                    'app'
+                ], function(Video, VideoInfoView, app) {
+                    var video = new Video(response.data);                                         
+                    console.log("our model", video);
+                    var views= new VideoInfoView({
+                        model: video
+                    });
+                    console.log("view", views);
+                    app.content.show(views);     
+                });
+            })
         }
+
+
+
+
+
+
     
     }
 });
