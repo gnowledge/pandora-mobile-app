@@ -34,6 +34,10 @@ function($, settings) {
             return $xhr;
         }
 
+        
+    
+
+
     };
     console.log("api helper", ApiHelper);
     //return {'hello': 'hi'};
