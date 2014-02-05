@@ -4,16 +4,16 @@ define([
 ],
 
 function(Backbone, settings) {
-	var Video = Backbone.Model.extend({
+	var Videos = Backbone.Model.extend({
 		initialize: function() {
-			this.set("videoURL96", this.getVideoURL("96"));
-			this.set("videoURL240", this.getVideoURL("240"));
+			this.set("videosURL96", this.getVideosURL("96"));
+			this.set("videosURL240", this.getVideosURL("240"));
 			
 
 			this.set("iconURL", this.getIconURL())
 		},
 
-		getVideoURL: function(size) {
+		getVideosURL: function(size) {
 			return settings.pandoraInstance + this.id + "/" + size + "p.webm";
 		},
 
@@ -31,5 +31,5 @@ function(Backbone, settings) {
 
 	});
 
-	return Video;
+	return Videos;
 }); 

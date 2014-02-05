@@ -38,9 +38,8 @@ function($, require, Backbone, HomeView, api) {
                 app.content.show(view);
             });    
         },
-        'video': function(id, view){
-            console.log(id,view);
-            var $xhr = api.getVideo(id);
+        'videoInfo': function(id){
+            var $xhr = api.getVideoInfo(id);
             $xhr.done(function(response) {
                 require([
                     'models/video',
@@ -52,27 +51,49 @@ function($, require, Backbone, HomeView, api) {
                     var view = new VideoInfoView({
                         model: video
                     });
-                    console.log("view", view);
                     app.content.show(view);     
                 });
             })
         },
 
+        'videoLayers': function(id) {
+            console.log("video layers function", id)
+            var $xhr = api.getVideoLayers(id);
+            $xhr.done(function(response) {
+                console.log(response);
+                require([
+                    'collections/transcripts',
+                    'views/videoTranscripts',
+                    'app'
+                ], function(Transcripts, VideoTranscriptsView, app) {
+                    var data = response.data.layers.transcripts;
+                    var transcripts = new Transcripts(data);
+                    console.log(transcripts);
+                    var view = new VideoTranscriptsView({
+                        collection: transcripts
+                    });
+                    app.content.show(view);
+                });
+            });
+        },
 
+        'signin': function() {
+            //Instantiate Signin View and render inside app.content
+        },
 
-        'video': function(ids, views){
+        'videos': function(ids, views){
             console.log(ids,views);
-            var $xhr = api.getVideo(ids);
+            var $xhr = api.getVideos(ids);
             $xhr.done(function(response) {
                 require([
-                    'models/video',
-                    'views/videoInfo',
+                    'models/videos',
+                    'views/videosInfo',
                     'app'
-                ], function(Video, VideoInfoView, app) {
-                    var video = new Video(response.data);                                         
-                    console.log("our model", video);
-                    var views= new VideoInfoView({
-                        model: video
+                ], function(Videos, VideosInfoView, app) {
+                    var videos = new Videos(response.data);                                         
+                    console.log("our model", videos);
+                    var views= new VideosInfoView({
+                        model: videos
                     });
                     console.log("view", views);
                     app.content.show(views);     

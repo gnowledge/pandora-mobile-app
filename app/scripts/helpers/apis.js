@@ -6,11 +6,11 @@ define([
 function($, settings) {
     var ApiHelper = function() {
         var instanceBase = settings.pandoraInstance;
-        var apiBase = instanceBase + "api/";
+        var apisBase = instanceBase + "apis/";
 
         this.q = function(action, data) {
             var $xhr = $.ajax({
-                'url': apiBase,
+                'url': apisBase,
                 'data': {
                     'action': action,
                     'data': JSON.stringify(data)
@@ -25,38 +25,22 @@ function($, settings) {
             return $xhr;
         };
 
-        this.getVideoInfo = function(id) {
+        this.getVideo=function(ids) {
             var data= {
-                'id':id
+                'ids':ids
             };
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };
+        }
 
-        this.getVideoLayers = function(id) {
-            var data= {
-                'id': id,
-                'keys': ['layers']
-            };
-            var action='get';
-            var $xhr = this.q(action, data);
-            return $xhr;
-        };
+        
+    
 
-        this.signin = function(username, password) {
-            var data = {
-                username: username,
-                password: password
-            };
-            var action = "signin";
-            var $xhr = this.q(action, data);
-            return $xhr;         
-        };
 
     };
-    console.log("api helper", ApiHelper);
+    console.log("apis helper", ApisHelper);
     //return {'hello': 'hi'};
-    return new ApiHelper(); 
+    return new ApisHelper(); 
 
 });
