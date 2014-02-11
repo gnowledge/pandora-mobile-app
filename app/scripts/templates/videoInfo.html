@@ -1,6 +1,30 @@
-<h3><b>Title: {{ title }}</b></h3>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;	
+	}
+	header{
+		display: block;
+	}
+	h3{
+		font: 20px bold Tahoma;
+	}
+	body{
+		text-align: center;
+	}
+	#data{
+		border: 1px solid black;
+		width: 1000px;
+		margin: 20px auto;
+		text-align: center;
+	}
+</style>
 
-<img src="{{ iconURL }}" />
+<header><h3><b>Title: {{ title }}</b></h3></header>
+
+
+<img src="{{ iconURL }}" width="100px"/>
+<div id= "data">
 <p><b>Location:</b> {{ location }}</p>
 <p><b>Date:</b> {{ date }} </p> 
 <p><b>Language:</b> {{ language }} </p>
@@ -10,12 +34,10 @@
 <p><b>License:</b> {{{ license }}} </p>
 <p><b>Source:</b> {{ source }} </p>
 <p><b>Project:</b> {{ project }} </p>
-
+</div>
 
 
 
 <video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
 
 <button id="makeVideoBig">Make video big</button>
-
-
