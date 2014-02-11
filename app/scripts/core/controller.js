@@ -38,6 +38,25 @@ function($, require, Backbone, HomeView, api) {
                 app.content.show(view);
             });    
         },
+
+        'playVideo': function(id){
+            var $xhr = api.getPlayVideo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/video',
+                    'views/playVideo',
+                    'app'
+                ], function(Video, PlayVideoView, app) {
+                    var video = new Video(response.data);                                         
+                    console.log("our model", video);
+                    var view = new PlayVideoView({
+                        model: video
+                    });
+                    app.content.show(view);     
+                });
+            })
+        },
+
         'videoInfo': function(id){
             var $xhr = api.getVideoInfo(id);
             $xhr.done(function(response) {
