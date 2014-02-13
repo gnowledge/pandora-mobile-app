@@ -8,16 +8,25 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "test template\n\n\nukya's world";
+  return "\n<div class=\"homeContainer\">\n	Test Template - You are home.\n</div>\n";
   });
 
-this["JST"]["app/scripts/templates/signin.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["JST"]["app/scripts/templates/playVideo.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  return "\n  <div class=\"signinDiv\">\n      <form id=\"signinForm\">\n        <label for=\"txt_User\">User Name:</label>\n        <input id=\"txt_User\" type=\"text\"  width=15px/>\n        <br>\n\n\n        <label for=\"txt_Password\">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n        <input id=\"txt_Password\" type=\"password\" /><br>\n         <br><input class=\"button\" value=\"Ok\" type=\"submit\" />\n         <button id=\"signinReset\" type=\"reset\" class=\"button\"  value=\"reset\">Reset</button>\n   \n      </form>\n  </div>\n   ";
+  buffer += "<style type=\"text/css\">\n*{\n	margin: 0px;\n	padding: 0px;\n}\nheader{\n	display: block;\n}\nh3{\n	font:20px bold Tahoma;\n}\nbody{\n	text-align: center;\n}\n</style>\n\n<header>\n	<h3>Play Video Page</h3>\n</header>\n\n\n<video src=\"";
+  if (stack1 = helpers.videoURL96) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.videoURL96); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" id=\"pandoraVideo\" poster=\"";
+  if (stack1 = helpers.iconURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.iconURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" controls></video>\n</br>\n<button id=\"makeVideoBig\">Make video big</button>\n";
+  return buffer;
   });
 
 this["JST"]["app/scripts/templates/signin.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -35,23 +44,51 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<h3>Title: ";
+  buffer += "<style type=\"text/css\">\n	*{\n		margin: 0px;\n		padding: 0px;	\n	}\n	header{\n		display: block;\n	}\n	h3{\n		font: 20px bold Tahoma;\n	}\n	body{\n		text-align: center;\n	}\n	#data{\n		border: 1px solid black;\n		width: 1000px;\n		margin: 20px auto;\n		text-align: center;\n	}\n</style>\n\n<header><h3><b>Title: ";
   if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</h3>\n<img src=\"";
+    + "</b></h3></header>\n\n\n<img src=\"";
   if (stack1 = helpers.iconURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.iconURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\" />\n<h4>Location: ";
+    + "\" width=\"100px\"/>\n<div id= \"data\">\n<p><b>Location:</b> ";
   if (stack1 = helpers.location) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.location); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</h4>\n<p>Summary: ";
+    + "</p>\n<p><b>Date:</b> ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.date); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p> \n<p><b>Language:</b> ";
+  if (stack1 = helpers.language) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.language); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p>\n<p><b>Director:</b> ";
+  if (stack1 = helpers.director) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.director); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p>\n<p><b>Topic:</b> ";
+  if (stack1 = helpers.topic) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.topic); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p>\n<p><b>Summary:</b> ";
   if (stack1 = helpers.summary) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.summary); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " </p>\n\n<video src=\"";
+  buffer += " </p>\n<p><b>License:</b> ";
+  if (stack1 = helpers.license) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.license); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " </p>\n<p><b>Source:</b> ";
+  if (stack1 = helpers.source) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.source); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p>\n<p><b>Project:</b> ";
+  if (stack1 = helpers.project) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.project); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " </p>\n</div>\n\n\n\n<video src=\"";
   if (stack1 = helpers.videoURL96) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.videoURL96); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)

@@ -25,6 +25,15 @@ function($, settings) {
             return $xhr;
         };
 
+        this.getPlayVideo = function(id) {
+            var data= {
+                'id':id
+            };
+            var action='get';
+            var $xhr = this.q(action, data);
+            return $xhr;
+        };
+
         this.getVideoInfo = function(id) {
             var data= {
                 'id':id

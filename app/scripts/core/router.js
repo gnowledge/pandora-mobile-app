@@ -7,6 +7,7 @@ function(Marionette, Controller) {
     var appRoutes = {
         '': 'home',
         'signin': 'signin',
+        'video/:id/videoplay': 'playVideo',
         'video/:id/info': 'videoInfo',
         'video/:id/layers': 'videoLayers'
         
