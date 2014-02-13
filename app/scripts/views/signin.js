@@ -30,9 +30,9 @@ function(Backbone, Marionette, settings, templates, api, app) {
                 }
                 if (response.data.errors) {
                     if (response.data.errors.username) {
-                        alert(response.data.errors.username);
+                        alert("ERROR: " + response.data.errors.username);
                     } else {
-                        alert(response.data.errors.password);
+                        alert("ERROR: " + response.data.errors.password);
                     }
                 } else {
                     var user = response.data.user;
