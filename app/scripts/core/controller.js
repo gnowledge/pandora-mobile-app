@@ -1,11 +1,3 @@
-/**
- * # controller.js
- *
- * Implements basic Marionette controller pattern.
- *
- * Each of the route controllers identified in routes.js is defined here.
- */
-
 define([
     "jquery",
     "require",
@@ -38,6 +30,25 @@ function($, require, Backbone, HomeView, api) {
                 app.content.show(view);
             });    
         },
+
+        'playVideo': function(id){
+            var $xhr = api.getPlayVideo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/video',
+                    'views/playVideo',
+                    'app'
+                ], function(Video, PlayVideoView, app) {
+                    var video = new Video(response.data);                                         
+                    console.log("our model", video);
+                    var view = new PlayVideoView({
+                        model: video
+                    });
+                    app.content.show(view);     
+                });
+            })
+        },
+
         'videoInfo': function(id){
             var $xhr = api.getVideoInfo(id);
             $xhr.done(function(response) {
@@ -77,29 +88,18 @@ function($, require, Backbone, HomeView, api) {
             });
         },
 
-        'signin': function() {
-            //Instantiate Signin View and render inside app.content
-        },
+        
+'signin': function() {
+  require([
+    'views/signin',
+    'app'
+  ], function(SigninView, app) {
+    var signinView = new SigninView();
+    app.content.show(signinView);
+  });
+}
 
-        'videos': function(ids, views){
-            console.log(ids,views);
-            var $xhr = api.getVideos(ids);
-            $xhr.done(function(response) {
-                require([
-                    'models/videos',
-                    'views/videosInfo',
-                    'app'
-                ], function(Videos, VideosInfoView, app) {
-                    var videos = new Videos(response.data);                                         
-                    console.log("our model", videos);
-                    var views= new VideosInfoView({
-                        model: videos
-                    });
-                    console.log("view", views);
-                    app.content.show(views);     
-                });
-            })
-        }
+        
 
 
 
@@ -109,3 +109,4 @@ function($, require, Backbone, HomeView, api) {
     
     }
 });
+

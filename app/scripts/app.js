@@ -16,6 +16,7 @@ function (_, Backbone, Marionette, Router) {
         this.addRegions({
             'content': '#content'
         });
+        this.user = {};
     });
 
     // Add as many of these as you like

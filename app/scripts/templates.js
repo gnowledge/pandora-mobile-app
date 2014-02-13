@@ -11,6 +11,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return "test template\n\n\nhello chakre";
   });
 
+this["JST"]["app/scripts/templates/signin.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "\n  <div class=\"signinDiv\">\n      <form id=\"signinForm\">\n        <label for=\"txt_User\">User Name:</label>\n        <input id=\"txt_User\" type=\"text\"  width=15px/>\n        <br>\n\n\n        <label for=\"txt_Password\">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n        <input id=\"txt_Password\" type=\"password\" /><br>\n         <br><input class=\"button\" value=\"Ok\" type=\"submit\" />\n         \n   \n      </form>\n    <button id=\"signinReset\" type=\"reset\" class=\"button\"  value=\"reset\">Reset</button>\n  </div>\n   ";
+  });
+
 this["JST"]["app/scripts/templates/videoInfo.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
