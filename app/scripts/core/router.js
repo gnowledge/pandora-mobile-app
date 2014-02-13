@@ -9,6 +9,7 @@ function(Marionette, Controller) {
         'signin': 'signin',
         'video/:id/info': 'videoInfo',
         'video/:id/layers': 'videoLayers'
+        
     };
 
     var router = Marionette.AppRouter.extend({

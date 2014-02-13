@@ -88,17 +88,17 @@ function($, require, Backbone, HomeView, api) {
             });
         },
 
-        
-'signin': function() {
-  require([
-    'views/signin',
-    'app'
-  ], function(SigninView, app) {
-    var signinView = new SigninView();
-    app.content.show(signinView);
-  });
-}
 
+        'signin': function() {
+            require([
+                'views/signin',
+                'app'
+            ], function(SigninView, app) {
+                var signinView = new SigninView();
+                app.content.show(signinView);
+            });
+        }
+        
         
 
 
