@@ -1,11 +1,3 @@
-/**
- * # controller.js
- *
- * Implements basic Marionette controller pattern.
- *
- * Each of the route controllers identified in routes.js is defined here.
- */
-
 define([
     "jquery",
     "require",
@@ -32,31 +24,107 @@ function($, require, Backbone, HomeView, api) {
                     "sort":[{"key":"position","operator":"+"}]}
             var $xhr = api.q("findLists", listQuery);
             //var $xhr = api.q("findLists", {'keys': ['featured']});
-            $xhr.done(function(data) {
-                console.log("home route", data);
-                var view = new HomeView();
-                app.content.show(view);
+            $xhr.done(function(response) {
+                var listItems = response.data.items;
+                require([
+                    'collections/videoLists',
+                    'views/videoLists',
+                    'app'
+                ], function(VideoLists, VideoListsView, app) {
+                    console.log("home route", listItems);
+                    var videoLists = new VideoLists(listItems);
+                    var view = new VideoListsView({
+                        collection: videoLists
+                    });
+                    app.content.show(view);
+                });
             });    
         },
-        'video': function(id, view){
-            console.log(id,view);
-            var $xhr = api.getVideo(id);
+
+        'playVideo': function(id){
+            var $xhr = api.getPlayVideo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/video',
+                    'views/playVideo',
+                    'app'
+                ], function(Video, PlayVideoView, app) {
+                    var video = new Video(response.data);                                         
+                    console.log("our model", video);
+                    var view = new PlayVideoView({
+                        model: video
+                    });
+                    app.content.show(view);     
+                });
+            })
+        },
+
+        'list': function(id) {
+            var $xhr = api.getVideosInList(id);
+            $xhr.done(function(response) {
+                var videosData = response.data.items;
+                console.log("videos in this list", videosData);
+            });
+        },
+
+        'videoInfo': function(id){
+            var $xhr = api.getVideoInfo(id);
             $xhr.done(function(response) {
                 require([
                     'models/video',
                     'views/videoInfo',
                     'app'
                 ], function(Video, VideoInfoView, app) {
-                    var video = new Video(response.data);
+                    var video = new Video(response.data);                                         
                     console.log("our model", video);
                     var view = new VideoInfoView({
                         model: video
                     });
-                    console.log("view", view);
                     app.content.show(view);     
                 });
             })
+        },
+
+        'videoLayers': function(id) {
+            console.log("video layers function", id)
+            var $xhr = api.getVideoLayers(id);
+            $xhr.done(function(response) {
+                console.log(response);
+                require([
+                    'collections/transcripts',
+                    'views/videoTranscripts',
+                    'app'
+                ], function(Transcripts, VideoTranscriptsView, app) {
+                    var data = response.data.layers.transcripts;
+                    var transcripts = new Transcripts(data);
+                    console.log(transcripts);
+                    var view = new VideoTranscriptsView({
+                        collection: transcripts
+                    });
+                    app.content.show(view);
+                });
+            });
+        },
+
+
+        'signin': function() {
+            require([
+                'views/signin',
+                'app'
+            ], function(SigninView, app) {
+                var signinView = new SigninView();
+                app.content.show(signinView);
+            });
         }
+        
+        
+
+
+
+
+
+
     
     }
 });
+

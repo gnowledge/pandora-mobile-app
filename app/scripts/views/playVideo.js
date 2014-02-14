@@ -6,8 +6,8 @@ define([
 ],
 
 function(Backbone, Marionette, settings, templates) {
-    var VideoInfoView = Marionette.ItemView.extend({
-        template: templates[settings.templatesBase + "videoInfo.html"],
+    var PlayVideoView = Marionette.ItemView.extend({
+        template: templates[settings.templatesBase + "playVideo.html"],
         events: {
         	'click #makeVideoBig': 'makeVideoBig'
         },
@@ -20,5 +20,5 @@ function(Backbone, Marionette, settings, templates) {
         }
     });
 
-    return VideoInfoView;
+    return PlayVideoView;
 });

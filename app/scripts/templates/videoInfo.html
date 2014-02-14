@@ -1,6 +1,45 @@
-<h3>Title: {{ title }}</h3>
-<img src="{{ iconURL }}" />
-<h4>Location: {{ location }}</h4>
-<p>Summary: {{ summary }} </p>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;	
+	}
+	header{
+		display: block;
+	}
+	h3{
+		font: 20px bold Tahoma;
+	}
+	body{
+		text-align: center;
+	}
+	#data{
+		border: 1px solid black;
+		width: 1000px;
+		margin: 20px auto;
+		text-align: center;
+	}
+</style>
 
-<video src="{{ videoURL }}" poster="{{ iconURL }}" controls></video>
+<header><h3><b>Title: {{ title }}</b></h3></header>
+
+
+<a href="#video/{{ id }}/videoplay">
+<img src="{{ iconURL }}" width="100px"/>
+</a>
+<div id= "data">
+<p><b>Location:</b> {{ location }}</p>
+<p><b>Date:</b> {{ date }} </p> 
+<p><b>Language:</b> {{ language }} </p>
+<p><b>Director:</b> {{ director }} </p>
+<p><b>Topic:</b> {{ topic }} </p>
+<p><b>Summary:</b> {{{ summary }}} </p>
+<p><b>License:</b> {{{ license }}} </p>
+<p><b>Source:</b> {{ source }} </p>
+<p><b>Project:</b> {{ project }} </p>
+</div>
+
+
+
+<video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
+
+<button id="makeVideoBig">Make video big</button>
