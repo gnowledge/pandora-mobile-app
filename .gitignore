@@ -5,3 +5,5 @@ dist
 app/bower_components
 .tmp/
 *~
+npm-debug.log
+app/scripts/templates.js
