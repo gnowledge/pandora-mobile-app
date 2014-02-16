@@ -1,0 +1,34 @@
+*{
+		margin: 0px;
+		padding: 0px;	
+	}
+	header{
+		display: block;
+	}
+	h3{
+		font: 20px bold Tahoma;
+	}
+	body{
+		text-align: center;
+	}
+	#data{
+		border: 1px solid black;
+		width: 800px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	#signinDiv
+	{
+		border: 1px solid black;
+		width: 500px;
+		height: 250px;
+		margin: 20px auto;
+		padding: 20px;
+		text-align: center;
+	}
+	#layer{
+		border: 1px solid black;
+		width: 800px;
+		margin: 20px auto;
+		text-align: center;
+	}
