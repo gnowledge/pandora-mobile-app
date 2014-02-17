@@ -9,7 +9,8 @@ function(Marionette, Controller) {
         'signin': 'signin',
         'video/:id/videoplay': 'playVideo',
         'video/:id/info': 'videoInfo',
-        'video/:id/layers': 'videoLayers'
+        'video/:id/layers': 'videoLayers',
+        'list/:id': 'list'
         
     };
 

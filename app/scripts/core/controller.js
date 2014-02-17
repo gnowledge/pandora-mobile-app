@@ -24,10 +24,20 @@ function($, require, Backbone, HomeView, api) {
                     "sort":[{"key":"position","operator":"+"}]}
             var $xhr = api.q("findLists", listQuery);
             //var $xhr = api.q("findLists", {'keys': ['featured']});
-            $xhr.done(function(data) {
-                console.log("home route", data);
-                var view = new HomeView();
-                app.content.show(view);
+            $xhr.done(function(response) {
+                var listItems = response.data.items;
+                require([
+                    'collections/videoLists',
+                    'views/videoLists',
+                    'app'
+                ], function(VideoLists, VideoListsView, app) {
+                    console.log("home route", listItems);
+                    var videoLists = new VideoLists(listItems);
+                    var view = new VideoListsView({
+                        collection: videoLists
+                    });
+                    app.content.show(view);
+                });
             });    
         },
 
@@ -47,6 +57,14 @@ function($, require, Backbone, HomeView, api) {
                     app.content.show(view);     
                 });
             })
+        },
+
+        'list': function(id) {
+            var $xhr = api.getVideosInList(id);
+            $xhr.done(function(response) {
+                var videosData = response.data.items;
+                console.log("videos in this list", videosData);
+            });
         },
 
         'videoInfo': function(id){

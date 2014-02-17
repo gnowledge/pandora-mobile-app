@@ -9,7 +9,9 @@ function ($, Backbone, App) {
 
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
-    App.start();
+    $(document).ready(function() {
+        App.start();
+    });
 
     // Trigger the initial route and enable HTML5 History API support
     //Backbone.history.start({ pushState: true, root: App.root });
