@@ -9,6 +9,9 @@ function(Marionette, settings, templates) {
 		template: templates[settings.templatesBase + "videoListItem.html"]
 	});
 
+
+
+
 	return VideoListItemView;
 
 });
