@@ -22,6 +22,7 @@ function($, require, Backbone, HomeView, api) {
                     },
                     "range":[0,19],
                     "sort":[{"key":"position","operator":"+"}]}
+                    
             var $xhr = api.q("findLists", listQuery);
             //var $xhr = api.q("findLists", {'keys': ['featured']});
             $xhr.done(function(response) {
