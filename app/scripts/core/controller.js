@@ -22,7 +22,7 @@ function($, require, Backbone, HomeView, api) {
                     },
                     "range":[0,19],
                     "sort":[{"key":"position","operator":"+"}]}
-                    
+
             var $xhr = api.q("findLists", listQuery);
             //var $xhr = api.q("findLists", {'keys': ['featured']});
             $xhr.done(function(response) {
@@ -80,6 +80,24 @@ function($, require, Backbone, HomeView, api) {
                     console.log("our model", video);
                     var view = new VideoInfoView({
                         model: video
+                    });
+                    app.content.show(view);     
+                });
+            })
+        },
+
+        'media': function(id){
+            var $xhr = api.getMediaInfo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/media',
+                    'views/mediaInfo',
+                    'app'
+                ], function(Media, MediaInfoView, app) {
+                    var media = new Media(response.data);                                         
+                    console.log("our model", media);
+                    var view = new MediaInfoView({
+                        model: media
                     });
                     app.content.show(view);     
                 });

@@ -4,13 +4,11 @@ define([
 ],
 
 function(Backbone, settings) {
-	var VideoList = Backbone.Model.extend({
-
-
-			
+	var Media = Backbone.Model.extend({
 		
-
+			
+				
 	});
 
-	return VideoList;
-});
+	return Media;
+}); 
