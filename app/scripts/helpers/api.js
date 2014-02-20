@@ -30,6 +30,23 @@ function($, settings) {
             return $xhr;
         };
 
+        this.getFeaturedLists = function() {
+            var listQuery = {
+                "keys": ["user","name","items","type","status","id","modified","query"],
+                "query": {
+                    "conditions": [
+                            {"key":"status","value":"featured","operator":"="}
+                        ],
+                        "operator":"&"
+                    },
+                    "range":[0,19],
+                    "sort":[{"key":"position","operator":"+"}]
+                }
+
+            return this.q("findLists", listQuery);
+
+        }
+
         this.init = function() {
             var data = {};
             var action = "init";

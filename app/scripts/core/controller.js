@@ -13,19 +13,8 @@ function($, require, Backbone, HomeView, api, LoadingView) {
         'home': function() {
             var app = require('app');
             app.content.show(loadingView);
-            var listQuery = {
-                "keys": ["user","name","items","type","status","id","modified","query"],
-                "query": {
-                    "conditions": [
-                            {"key":"status","value":"featured","operator":"="}
-                        ],
-                        "operator":"&"
-                    },
-                    "range":[0,19],
-                    "sort":[{"key":"position","operator":"+"}]}
 
-            var $xhr = api.q("findLists", listQuery);
-            //var $xhr = api.q("findLists", {'keys': ['featured']});
+            var $xhr = api.getFeaturedLists();
             $xhr.done(function(response) {
                 var listItems = response.data.items;
                 require([
