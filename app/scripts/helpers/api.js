@@ -7,8 +7,15 @@ function($, settings) {
     var ApiHelper = function() {
         var instanceBase = settings.pandoraInstance;
         var apiBase = instanceBase + "api/";
-
+        this.cache = {};
         this.q = function(action, data) {
+            var cacheKey = JSON.stringify({
+                'action': action,
+                'data': data
+            });
+            if (this.cache.hasOwnProperty(cacheKey)) {
+                return this.cache[cacheKey];
+            }
             var $xhr = $.ajax({
                 'url': apiBase,
                 'data': {
@@ -18,10 +25,8 @@ function($, settings) {
                 'type': 'POST',
                 'dataType': 'json'
             });
-            // var $xhr = $.post(apiBase, {
-            //     'action': action,
-            //     'data': JSON.stringify(data)
-            // })
+            this.cache[cacheKey] = $xhr;
+
             return $xhr;
         };
 
