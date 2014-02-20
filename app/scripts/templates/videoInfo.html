@@ -1,29 +1,8 @@
-<style type="text/css">
-	*{
-		margin: 0px;
-		padding: 0px;	
-	}
-	header{
-		display: block;
-	}
-	h3{
-		font: 20px bold Tahoma;
-	}
-	body{
-		text-align: center;
-	}
-	#data{
-		border: 1px solid black;
-		width: 1000px;
-		margin: 20px auto;
-		text-align: center;
-	}
-</style>
-
 <header><h3><b>Title: {{ title }}</b></h3></header>
 
-
 <a href="#video/{{ id }}/videoplay">
+
+	
 <img src="{{ iconURL }}" width="100px"/>
 </a>
 <div id= "data">
@@ -40,6 +19,3 @@
 
 
 
-<video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
-
-<button id="makeVideoBig">Make video big</button>

@@ -10,7 +10,8 @@ function(Marionette, Controller) {
         'video/:id/videoplay': 'playVideo',
         'video/:id/info': 'videoInfo',
         'video/:id/layers': 'videoLayers',
-        'list/:id': 'list'
+        'list/:id': 'list',
+        'media/:id': 'media'
         
     };
 

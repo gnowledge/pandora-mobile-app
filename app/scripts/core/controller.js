@@ -22,6 +22,7 @@ function($, require, Backbone, HomeView, api) {
                     },
                     "range":[0,19],
                     "sort":[{"key":"position","operator":"+"}]}
+
             var $xhr = api.q("findLists", listQuery);
             //var $xhr = api.q("findLists", {'keys': ['featured']});
             $xhr.done(function(response) {
@@ -63,8 +64,20 @@ function($, require, Backbone, HomeView, api) {
             var $xhr = api.getVideosInList(id);
             $xhr.done(function(response) {
                 var videosData = response.data.items;
-                console.log("videos in this list", videosData);
-            });
+                require([
+                    'collections/videos',
+                    'views/videoList',
+                    'app'
+
+                ],function(Videos, VideoListView, app) {
+                    console.log("videos in this list", videosData);
+                    var videosCollection = new Videos(videosData);
+                    var view = new VideoListView({
+                        collection: videosCollection
+                    })
+                    app.content.show(view);
+                });
+            });    
         },
 
         'videoInfo': function(id){
@@ -79,6 +92,24 @@ function($, require, Backbone, HomeView, api) {
                     console.log("our model", video);
                     var view = new VideoInfoView({
                         model: video
+                    });
+                    app.content.show(view);     
+                });
+            })
+        },
+
+        'media': function(id){
+            var $xhr = api.getMediaInfo(id);
+            $xhr.done(function(response) {
+                require([
+                    'models/media',
+                    'views/mediaInfo',
+                    'app'
+                ], function(Media, MediaInfoView, app) {
+                    var media = new Media(response.data);                                         
+                    console.log("our model", media);
+                    var view = new MediaInfoView({
+                        model: media
                     });
                     app.content.show(view);     
                 });

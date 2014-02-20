@@ -67,6 +67,15 @@ function($, settings) {
             return $xhr;
         };
 
+        this.getMediaInfo = function(id) {
+            var data= {
+                'id':id
+            };
+            var action='get';
+            var $xhr = this.q(action, data);
+            return $xhr;
+        };
+
         this.getVideoLayers = function(id) {
             var data= {
                 'id': id,
