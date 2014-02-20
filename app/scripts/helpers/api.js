@@ -54,6 +54,24 @@ function($, settings) {
             return this.q(action, data);
         };
 
+        this.getVideosSearch = function(queryString) {
+            var data = {
+                query: {
+                    conditions: [{
+                        key: '*',
+                        operator: '=',
+                        value: queryString
+                    }],
+                    operator: '&'
+                },
+                keys: ['title', 'id'],
+                range: [0,50],
+                sort: [{key: 'title', operator: '+'}]
+            };
+            var action = "find";
+            return this.q(action, data);          
+        };
+
         this.getPlayVideo = function(id) {
             var data= {
                 'id':id

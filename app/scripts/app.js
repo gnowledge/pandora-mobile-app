@@ -3,10 +3,11 @@ define([
     "backbone",
     "marionette",
     "core/router",
+    "views/header",
     "foundation"
 ],
 
-function (_, Backbone, Marionette, Router) {
+function (_, Backbone, Marionette, Router, HeaderView) {
 
     var App = new Backbone.Marionette.Application();
 
@@ -18,6 +19,9 @@ function (_, Backbone, Marionette, Router) {
             'content': '#content'
         });
         this.user = {};
+        this.views = {
+            'header': new HeaderView()
+        }
     });
 
     // Add as many of these as you like

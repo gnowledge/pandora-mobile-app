@@ -17,11 +17,17 @@
     
 </head>
 <body>
-	<nav class="top-bar" data-topbar> 
+	<nav class="top-bar" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
             <li class="name"> <h1><a href="#">My Site</a></h1> </li>
-             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-              </ul>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+            <section class="top-bar-section search">
+              <form id="searchForm">
+                <input type="text" id="searchInput" style="width:100px;" />
+                <button id="searchButton">Search</button>
+              </form>
+            </section>
                <section class="top-bar-section">
                <!-- Right Nav Section --> 
                <ul class="right"> 

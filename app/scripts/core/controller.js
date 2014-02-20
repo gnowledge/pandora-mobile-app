@@ -3,15 +3,16 @@ define([
     "require",
     "backbone",
     "views/home",
-    "helpers/api"
+    "helpers/api",
+    "views/loading"
 ],
 
-function($, require, Backbone, HomeView, api) {
+function($, require, Backbone, HomeView, api, LoadingView) {
+    var loadingView = new LoadingView();
     return {
         'home': function() {
-            console.log("home view", HomeView);
-            console.log("api", api);
             var app = require('app');
+            app.content.show(loadingView);
             var listQuery = {
                 "keys": ["user","name","items","type","status","id","modified","query"],
                 "query": {
@@ -44,12 +45,13 @@ function($, require, Backbone, HomeView, api) {
 
         'playVideo': function(id){
             var $xhr = api.getPlayVideo(id);
+            var app = require('app');
+            app.content.show(loadingView);
             $xhr.done(function(response) {
                 require([
                     'models/video',
                     'views/playVideo',
-                    'app'
-                ], function(Video, PlayVideoView, app) {
+                ], function(Video, PlayVideoView) {
                     var video = new Video(response.data);                                         
                     console.log("our model", video);
                     var view = new PlayVideoView({
@@ -62,32 +64,55 @@ function($, require, Backbone, HomeView, api) {
 
         'list': function(id) {
             var $xhr = api.getVideosInList(id);
+            var app = require('app');
+            app.content.show(loadingView);
             $xhr.done(function(response) {
                 var videosData = response.data.items;
                 require([
                     'collections/videos',
                     'views/videoList',
-                    'app'
 
-                ],function(Videos, VideoListView, app) {
+                ],function(Videos, VideoListView) {
                     console.log("videos in this list", videosData);
                     var videosCollection = new Videos(videosData);
                     var view = new VideoListView({
                         collection: videosCollection
-                    })
+                    });
+                    app.content.show(view);
+                });
+            });    
+        },
+
+        'search': function(queryString) {
+            var app = require('app');
+            app.content.show(loadingView);
+            var $xhr = api.getVideosSearch(queryString);
+            $xhr.done(function(response) {
+                var videosData = response.data.items;
+                require([
+                    'collections/videos',
+                    'views/videoSearchResults',
+
+                ],function(Videos, VideoSearchResults) {
+                    console.log("videos matching query", videosData);
+                    var videosCollection = new Videos(videosData);
+                    var view = new VideoSearchResults({
+                        collection: videosCollection
+                    });
                     app.content.show(view);
                 });
             });    
         },
 
         'videoInfo': function(id){
+            var app = require('app');
+            app.content.show(loadingView);
             var $xhr = api.getVideoInfo(id);
             $xhr.done(function(response) {
                 require([
                     'models/video',
-                    'views/videoInfo',
-                    'app'
-                ], function(Video, VideoInfoView, app) {
+                    'views/videoInfo'
+                ], function(Video, VideoInfoView) {
                     var video = new Video(response.data);                                         
                     console.log("our model", video);
                     var view = new VideoInfoView({
@@ -117,6 +142,8 @@ function($, require, Backbone, HomeView, api) {
         },
 
         'videoLayers': function(id) {
+            var app = require('app');
+            app.content.show(loadingView);
             console.log("video layers function", id)
             var $xhr = api.getVideoLayers(id);
             $xhr.done(function(response) {
@@ -124,8 +151,7 @@ function($, require, Backbone, HomeView, api) {
                 require([
                     'collections/transcripts',
                     'views/videoTranscripts',
-                    'app'
-                ], function(Transcripts, VideoTranscriptsView, app) {
+                ], function(Transcripts, VideoTranscriptsView) {
                     var data = response.data.layers.transcripts;
                     var transcripts = new Transcripts(data);
                     console.log(transcripts);
