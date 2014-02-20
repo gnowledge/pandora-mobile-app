@@ -64,8 +64,20 @@ function($, require, Backbone, HomeView, api) {
             var $xhr = api.getVideosInList(id);
             $xhr.done(function(response) {
                 var videosData = response.data.items;
-                console.log("videos in this list", videosData);
-            });
+                require([
+                    'collections/videos',
+                    'views/videoList',
+                    'app'
+
+                ],function(Videos, VideoListView, app) {
+                    console.log("videos in this list", videosData);
+                    var videosCollection = new Videos(videosData);
+                    var view = new VideoListView({
+                        collection: videosCollection
+                    })
+                    app.content.show(view);
+                });
+            });    
         },
 
         'videoInfo': function(id){
