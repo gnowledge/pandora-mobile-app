@@ -32,9 +32,14 @@
 	}
 	img{
 		border:1px solid #;
-		border-radius: 25px;
+		border-radius: 15px;
 		box-shadow:rgb(110,110,110) 8px 8px 8px;
 	}
 	#pad{
 		padding-top: 10px;
+		text-align: left;
+	}
+	body{
+		background-color: #F0F8FF;
+		font: Tahoma;
 	}
