@@ -1,28 +1,29 @@
-<div class="large-8 columns">	
-	<div id= "data">
-		<p><b>Location:</b> {{ location }}</p>
-		<p><b>Date:</b> {{ date }} </p> 
-		<p><b>Language:</b> {{ language }} </p>
-		<p><b>Director:</b> {{ director }} </p>
-		<p><b>Topic:</b> {{ topic }} </p>
-		<p><b>Summary:</b> {{{ summary }}} </p>
-		<p><b>License:</b> {{{ license }}} </p>
-		<p><b>Source:</b> {{ source }} </p>
-		<p><b>Project:</b> {{ project }} </p>
-	</div>
-</div>
 
+<div id="pad">
 
-
-
-
-<div class="large-4 columns">
-	<header><h3><b>Title: {{ title }}</b></h3></header>
-
-	<a href="#video/{{ id }}/videoplay">
-
+<div class="row">
+<div class="small-3 columns">
 	
+	</br>
+	<a href="#video/{{ id }}/videoplay">
 	<img src="{{ iconURL }}" width="300px"/>
 	</a>
 </div>
- 
+
+
+ <div class="small-9 columns">	
+	<div id= "data">
+		<header><b>Title: {{ title }}</b></header></br></br>
+		<b>Project:</b> {{ project }}</br></br>
+		<b>Topic:</b> {{ topic }} </br></br>
+		<b>Location:</b> {{ location }}</br></br>
+		<b>Date:</b> {{ date }} </br></br>
+		<b>Language:</b> {{ language }}</br></br>
+		<b>Director:</b> {{ director }}</br></br>
+		<b>Summary:</b> {{{ summary }}}</br></br>
+	</div>
+</div>
+
+</div>
+
+</div>
