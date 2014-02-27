@@ -7,7 +7,7 @@
 
     <!-- Point to the compiled stylesheet -->
     <link rel="stylesheet" type="text/css" href="main.css">
-	 <link rel="stylesheet" type="text/css" href="css/foundation.css">
+     <link rel="stylesheet" type="text/css" href="css/foundation.css">
 
      <link rel="stylesheet" type="text/css" href="videoInfo.css">
 
@@ -17,7 +17,40 @@
     
 </head>
 <body>
-	<nav class="top-bar hide-for-small" id="siteHeader" data-topbar> 
+<nav class="top-bar hide-for-large" style="" id="siteHeader" data-topbar>
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon">
+      <div cslass="has-form"> 
+              <form id="searchForm">
+              <div class="row collapse"> 
+                <div class="small-6 columns">
+                  <input type="text" id="searchInput"  placeholder="Find Search" > 
+                </div>
+              <div class="small-6 columns">
+                <button id="searchButton" class="button">Search</button>
+              </div>
+          </div></form>
+          </div> 
+
+
+    </li><!-- li close -->
+  </ul>
+
+
+<section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      
+    </ul>
+  </section>
+</nav>
+
+<nav class="top-bar hide-for-small" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
             <li class="name"> <h1><a href="#"><b>Home</b></a></h1> </li>
             <!--<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li> -->
@@ -50,47 +83,6 @@
             </ul>
         </section> 
     </nav>
-    
-<nav class="top-bar hide-for-large" style="" id="siteHeader" data-topbar>
-  <ul class="title-area">
-    <!-- Title Area -->
-    <div class="small-4 columns">
-    <li class="name">
-      <h1><button class="button" onClick="parent.location='/'">home</button></h1>
-    </li>
-    </div>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <div class="small-8 columns">
-    <li class="toggle-topbar menu-icon">
-      <li class="has-form"> 
-              <form id="searchForm">
-              <div class="row collapse"> 
-                <div class="small-9 columns">
-                  <input type="text" id="searchInput"  placeholder="Find Search" > 
-                </div>
-              <div class="small-3 columns">
-                <button id="searchButton" class="button">Search</button>
-              </div>
-          </div></form>
-          </li> 
-
-
-    </li><!-- li close -->
-    </div>
-  </ul>
-
-
-<section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      
-    </ul>
-  </section>
-</nav>
-
-
-    <div id="content"></div>
-
-
+ 
 </body>
 </html>
