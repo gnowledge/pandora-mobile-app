@@ -14,7 +14,7 @@ function(Backbone, settings) {
 		},
 
 		getVideoURL: function(size) {
-			return settings.pandoraInstance + this.id + "/" + size + "p.webm";
+			return settings.pandoraInstance + this.id + "/" + size + "p.mp4";
 		},
 
 		getIconURL: function() {
