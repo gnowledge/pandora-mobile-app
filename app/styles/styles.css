@@ -10,6 +10,7 @@
 	}
 	body{
 		text-align: center;
+
 	}
 	#data{
 		margin: 20px auto;
@@ -30,7 +31,7 @@
 		box-shadow:rgb(110,110,110) 8px 8px 8px;
 	}
 	#pad{
-		padding-top: 10px;
+		margin-top: 50px;
 		text-align: left;
 	}
 	body{
@@ -38,5 +39,25 @@
 		font: Tahoma;
 	}
 	#pad2{
-		padding-top: 5px
+		padding-top: 5px;
 	}
+	#search{
+		padding-top: 7px;
+	}
+	#navBig{
+		top: 0;
+  		z-index: 100;
+  		position: fixed;
+  		width: 100%;
+	}
+#videopage{
+	margin-top: 50px;
+	text-align: center;
+}
+#navSmall
+{
+	top: 0;
+  	z-index: 100;
+  	position: fixed;
+ 	width: 100%;
+}

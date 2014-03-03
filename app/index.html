@@ -17,6 +17,7 @@
     
 </head>
 <body>
+  <div id="navBig">
 	<nav class="top-bar hide-for-small" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
             <li class="name"> <h1><a href="#"><b>Home</b></a></h1> </li>
@@ -50,7 +51,10 @@
             </ul>
         </section> 
     </nav>
-    
+
+  </div><!--Nav div close-->
+
+<div id="navSmall">
 <nav class="top-bar hide-for-large hide-for-medium" style="" id="siteHeader" data-topbar>
   <ul class="title-area">
     <!-- Title Area -->
@@ -67,11 +71,13 @@
               <form id="searchForm">
               <div class="row collapse"> 
                 <div class="small-9 columns">
-                  <input type="text" id="searchInput"  placeholder="Find Search" > 
+                  <input type="text" id="searchInput"  placeholder="Find Search"> 
                 </div>
               
               <div class="small-3 columns">
-                <button id="searchButton" class="button">Search</button>
+                <div id="search">
+                <a href="" id="searchButton">Search</a>
+              </div>
               </div>
           </div></form>
           </li> 
@@ -90,7 +96,7 @@
     </ul>
   </section>
 </nav>
-
+</div><!--small nav close-->
 
     <div id="content"></div>
 
