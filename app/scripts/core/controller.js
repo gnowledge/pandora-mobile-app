@@ -32,7 +32,7 @@ function($, require, Backbone, HomeView, api, LoadingView) {
             });    
         },
 
-        'playVideo': function(id){
+        'playVideo': function(id, timing){
             var $xhr = api.getPlayVideo(id);
             var app = require('app');
             app.content.show(loadingView);
@@ -44,7 +44,8 @@ function($, require, Backbone, HomeView, api, LoadingView) {
                     var video = new Video(response.data);                                         
                     console.log("our model", video);
                     var view = new PlayVideoView({
-                        model: video
+                        model: video,
+                        timing: timing
                     });
                     app.content.show(view);     
                 });

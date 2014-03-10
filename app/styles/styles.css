@@ -1,67 +1,67 @@
-	*{
-		margin: 0px;
-		padding: 0px;	
-	}
-	header{
-		display: block;
-	}
-	h3{
-		font: 20px bold Tahoma;
-	}
-	
-	#data{
-		margin: 20px auto;
-		text-align: left;
-	}
-	#signinDiv
-	{
-		border: 1px solid black;
-		width: 500px;
-		height: 250px;
-		margin: 20px auto;
-		padding: 20px;
-		text-align: center;
-	}
-	img{
-		border:1px solid #;
-		border-radius: 15px;
-		box-shadow: #EEE8AA 8px 8px 8px;
-	}
-	#pad{
-		margin-top: 50px;
-		text-align: left;
-	}
-	body{
-		background-image: url(wall.jpg);
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		font: Tahoma;
-		text-align: center;
+    *{
+        margin: 0px;
+        padding: 0px;   
+    }
+    header{
+        display: block;
+    }
+    h3{
+        font: 20px bold Tahoma;
+    }
+    
+    #data{
+        margin: 20px auto;
+        text-align: left;
+    }
+    #signinDiv
+    {
+        border: 1px solid black;
+        width: 500px;
+        height: 250px;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+    }
+    img{
+        border:1px solid #;
+        border-radius: 15px;
+        box-shadow: #EEE8AA 8px 8px 8px;
+    }
+    #pad{
+        margin-top: 50px;
+        text-align: left;
+    }
+    body{
+        background-image: url(wall.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font: Tahoma;
+        text-align: center;
 
-	}
-	#pad2{
-		padding-top: 5px;
-	}
-	#search{
-		padding-top: 7px;
-	}
-	#navBig{
-		top: 0;
-  		z-index: 100;
-  		position: fixed;
-  		width: 100%;
-	}
-	#videopage{
-	margin-top: 50px;
-	text-align: center;
-	}
-	#navSmall
-	{
-	top: 0;
-  	z-index: 100;
-  	position: fixed;
- 	width: 100%;
-	}
+    }
+    #pad2{
+        padding-top: 5px;
+    }
+    #search{
+        padding-top: 7px;
+    }
+    #navBig{
+        top: 0;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+    }
+    #videopage{
+    margin-top: 50px;
+    text-align: center;
+    }
+    #navSmall
+    {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    }
 
 
