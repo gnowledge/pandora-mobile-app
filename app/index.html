@@ -18,35 +18,32 @@
     
 </head>
 <body>
-  <div id="navBig">
+  <div class="fixed" id="navbar">
 	<nav class="top-bar" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
-            <div class="small-4 columns">
-            <li class="name"> <h1><a href="#"><b>Home</b></a></h1> </li>
-            <!--<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li> -->
-          </div>
-          <div class="small-8 columns">
-            <form id="searchForm">
-              <div class="row collapse"> 
-                <div class="small-9 columns"> 
-                  <input type="text" id="searchInput"  placeholder="Find Search" > 
-                </div> 
-                <div class="small-3 columns"> 
-                  <button id="searchButton" class="button">Search</button> 
-                </div> 
-              </div></form>
+            <div class="large-4 small-4 columns">
+              <li class="name"> <h1><a href="#"><b>Home</b></a></h1> </li>
             </div>
-    </ul>
-            
-        
-    </nav>
-
-  </div><!--Nav div close-->
-
+            <div class="large-8 small-8 columns">
+              <form id="searchForm">
+                <li class="has-form">
+                  <div class="row collapse"> 
+                    <div class="large-11 small-8 columns">
+                      <input type="text" id="searchInput" placeholder="Find Search"> 
+                    </div> 
+                    <div class="large-1 small-4 columns"> 
+                      <button id="searchButton" class="alert button postfix">Search</button> 
+                    </div> 
+                  </div>
+                </li>
+              </form>
+            </div>
+       </ul>
+  </nav>
+  </div>
 
 
     <div id="content"></div>
-
 
 </body>
 </html>

@@ -3,12 +3,8 @@
 	<h5><b>{{ title }}</b></h5>
 </header>
 
-
-<video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
-</br>
-{{#if inPoint }}
-	In: {{ inPoint }} , Out: {{ outPoint }}
-{{/if }}
-<button id="makeVideoBig">Make video big</button>
-<a href="#video/{{ id }}/layers"><button >Transcript</button></a>
+<div class="flex-video widescreen vimeo"> 
+	<iframe src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+	</iframe> 
+</div>
 </div>

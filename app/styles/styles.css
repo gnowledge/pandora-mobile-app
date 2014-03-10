@@ -28,7 +28,7 @@
         box-shadow: #EEE8AA 8px 8px 8px;
     }
     #pad{
-        margin-top: 50px;
+        margin-top: 20px;
         text-align: left;
     }
     body{
@@ -40,28 +40,12 @@
         text-align: center;
 
     }
-    #pad2{
-        padding-top: 5px;
-    }
-    #search{
-        padding-top: 7px;
-    }
-    #navBig{
-        top: 0;
-        z-index: 100;
-        position: fixed;
-        width: 100%;
-    }
-    #videopage{
-    margin-top: 50px;
-    text-align: center;
-    }
-    #navSmall
-    {
-    top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    }
-
-
+    
+#searchButton{
+        border:1px solid #;
+        border-radius: 20px;   
+}
+#searchInput{
+        border:1px solid #;
+        border-radius: 20px;
+}
