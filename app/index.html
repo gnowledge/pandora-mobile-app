@@ -9,10 +9,11 @@
     <!-- Point to the compiled stylesheet -->
     <link rel="stylesheet" type="text/css" href="main.css">
 	  <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
      <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
      <script src="js/modernizr.js"></script>
-
     
     <!-- Point to the require script -->
     <script data-main="scripts/config" src="bower_components/requirejs/require.js"></script>
@@ -22,10 +23,10 @@
   <div class="fixed" id="navbar">
 	<nav class="top-bar" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
-            <div class="large-4 small-4 columns">
+            <div class="large-2 small-2 columns">
               <li class="name"> <h1><b><a href="#"><i class="step fi-home  home-icon"></i></a></b></h1></li>
             </div>
-            <div class="large-8 small-8 columns">
+            <div class="large-6 small-6 columns">
               <form id="searchForm">
                 <li class="has-form">
                   <div class="row collapse"> 
@@ -39,6 +40,18 @@
                 </li>
               </form>
             </div>
+
+            <div class="large-2 small-2 columns">
+              <li class="has-form">
+                  <a onclick="history.go(-1)"><i class="step fi-arrow-left home-icon"></i></a> 
+              </li>
+            </div>
+
+            <div class="large-2 small-2 columns">
+              <li class="has-form">
+                  <i class="step fi-power home-icon"></i>
+              </li>
+            </div>
        </ul>
   </nav>
   </div>
@@ -48,7 +61,7 @@
 
     <div id="content"></div>
 
-
+    
     <script src="js/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
