@@ -8,6 +8,7 @@ function(Backbone, settings) {
 
 		initialize: function() {
 			this.set('iconURL', this.getIconURL());
+			this.set("idUrl", encodeURIComponent(this.id));
 		},
 			
 		getIconURL: function(size) {

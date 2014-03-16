@@ -4,10 +4,11 @@ define([
     "backbone",
     "views/home",
     "helpers/api",
-    "views/loading"
+    "views/loading",
+    "settings"
 ],
 
-function($, require, Backbone, HomeView, api, LoadingView) {
+function($, require, Backbone, HomeView, api, LoadingView, settings) {
     var loadingView = new LoadingView();
     return {
         'home': function() {
@@ -56,8 +57,8 @@ function($, require, Backbone, HomeView, api, LoadingView) {
             if (!page) {
                 page = 0;
             }
-            var startRange = page * 50;
-            var endRange = startRange + 50;
+            var startRange = page * settings.pageSize;
+            var endRange = startRange + settings.pageSize;
             var range = [startRange, endRange];
             //first xhr request only fetches number of results, etc.
             var $xhr = api.getVideosInList(id, range);
@@ -87,8 +88,8 @@ function($, require, Backbone, HomeView, api, LoadingView) {
             if (!page) {
                 page = 0;
             }
-            var startRange = page * 50;
-            var endRange = startRange + 50;
+            var startRange = page * settings.pageSize;
+            var endRange = startRange + settings.pageSize;
             var range = [startRange, endRange];
             var app = require('app');
             app.content.show(loadingView);
@@ -106,7 +107,10 @@ function($, require, Backbone, HomeView, api, LoadingView) {
                         console.log("videos matching query", videosData);
                         var videosCollection = new Videos(videosData);
                         var view = new VideoSearchResults({
-                            collection: videosCollection
+                            collection: videosCollection,
+                            count: videosCount,
+                            page: page,
+                            queryString: queryString
                         });
                         app.content.show(view);
                     });

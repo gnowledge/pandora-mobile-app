@@ -1,12 +1,14 @@
 define([
 	'marionette',
-	'views/videoTranscript'
+	'views/videoTranscript',
+    'views/emptyTranscript'
 ],
 
-function(Marionette, VideoTranscriptView) {
+function(Marionette, VideoTranscriptView, EmptyTranscriptView) {
 
 	var VideoTranscriptsView = Marionette.CollectionView.extend({
-		itemView: VideoTranscriptView
+		itemView: VideoTranscriptView,
+        emptyView: EmptyTranscriptView
 	});
 
 	return VideoTranscriptsView;

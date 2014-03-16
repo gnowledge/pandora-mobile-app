@@ -1,5 +1,13 @@
 <div class="paginationInfo">
-    pagination goes here
+    Total results: {{ count }}
+    Displaying results {{ start }} - {{ end }}
+    {{#if prev }}
+        <a href="#search/{{ queryString }}/{{ prev }}">Prev</a>
+    {{/if }}
+    {{ page }}
+    {{#if next }}
+        <a href="#search/{{ queryString }}/{{ next }}">Next</a>
+    {{/if }}
 </div>
 <div class="videosList">
 
