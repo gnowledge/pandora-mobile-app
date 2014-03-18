@@ -7,7 +7,9 @@
 	</br>
 	<a href="#video/{{ id }}/videoplay">
 	<img src="{{ iconURL }}" width="300px"/>
-	</a>
+	</a></br></br>
+	<a class="tiny alert button expand rounded" href="#video/{{ id }}/videoplay"><b>Play</b></a>
+
 </div>
 
 
@@ -15,13 +17,55 @@
 	<div id= "data">
 		<a href="#video/{{ id }}/videoplay">
 		<header><h3><b>Title: {{ title }}</b></h3></header></a></br></br>
-		<b>Project:</b> {{ project }}</br></br>
-		<b>Topic:</b> {{ topic }} </br></br>
-		<b>Location:</b> {{ location }}</br></br>
-		<b>Date:</b> {{ date }} </br></br>
-		<b>Language:</b> {{ language }}</br></br>
-		<b>Director:</b> {{ director }}</br></br>
-		<b>Summary:</b> {{{ summary }}}</br></br>
+
+		<b>Project:</b> 
+				{{#if project }} 
+							{{ project }}
+					{{ else }} 
+							Not available  
+				{{/if}}</br></br>
+
+		<b>Topic:</b> 
+					{{#if topic }} 
+							{{ topic }}
+						{{ else }} 
+							Not available  
+					{{/if}}</br></br>
+
+		<b>Location:</b> 
+					{{#if location }} 
+							{{ location }}
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<b>Date:</b> 
+					{{#if date }} 
+							{{ date }}
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<b>Language:</b> 
+					{{#if language }} 
+							{{ language }}
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<b>Director:</b>
+						{{#if director }} 
+							{{ director }}
+								{{ else }} 
+									Not available  
+						{{/if}}</br></br>
+
+		<b>Summary:</b>
+					{{#if summary }} 
+						{{{ summary }}}
+							{{ else }}
+								Not available  
+					{{/if}}</br></br>
 	</div>
 </div>
 
