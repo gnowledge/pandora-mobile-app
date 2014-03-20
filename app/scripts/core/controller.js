@@ -31,7 +31,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);
                 });
             });    
-        },
+        },//Function of Home Page.
 
         'playVideo': function(id, timing){
             var $xhr = api.getPlayVideo(id);
@@ -51,7 +51,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);     
                 });
             })
-        },
+        },//Function to play  video.
 
         'list': function(id, page) {
             if (!page) {
@@ -82,7 +82,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     });
                 });
             });    
-        },
+        },//Function of list videos with pagination.
 
         'search': function(queryString, page) {
             if (!page) {
@@ -116,7 +116,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     });
                 });
             });    
-        },
+        },//Function of search video page with pagination.
 
         'videoInfo': function(id){
             var app = require('app');
@@ -135,25 +135,8 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);     
                 });
             })
-        },
+        },//Function of video Information (in detail).
 
-        'media': function(id){
-            var $xhr = api.getMediaInfo(id);
-            $xhr.done(function(response) {
-                require([
-                    'models/media',
-                    'views/mediaInfo',
-                    'app'
-                ], function(Media, MediaInfoView, app) {
-                    var media = new Media(response.data);                                         
-                    console.log("our model", media);
-                    var view = new MediaInfoView({
-                        model: media
-                    });
-                    app.content.show(view);     
-                });
-            })
-        },
 
         'videoLayers': function(id) {
             var app = require('app');
@@ -175,7 +158,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);
                 });
             });
-        },
+        },//Function of list video Transcripts.
 
 
         'signin': function() {
@@ -186,7 +169,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                 var signinView = new SigninView();
                 app.content.show(signinView);
             });
-        }
+        }//Function of sign-in page with email-id & password.
         
         
 

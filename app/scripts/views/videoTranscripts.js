@@ -11,5 +11,5 @@ function(Marionette, VideoTranscriptView, EmptyTranscriptView) {
         emptyView: EmptyTranscriptView
 	});
 
-	return VideoTranscriptsView;
+	return VideoTranscriptsView;//Empty transcript view.
 });

@@ -15,5 +15,5 @@ function(Marionette, VideoItemView, settings, templates) {
         }
 	});
 
-	return VideoListView;
+	return VideoListView;//Function for video list view with pagination.
 });

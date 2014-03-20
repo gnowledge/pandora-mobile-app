@@ -9,6 +9,6 @@ function(Marionette, settings, templates) {
         template: templates[settings.templatesBase + "emptyTranscript.html"]
     });
 
-    return EmptyTranscriptView;
+    return EmptyTranscriptView;//Function for Empty transcript page.
 
 });

@@ -10,5 +10,5 @@ function(Backbone, Marionette, settings, templates) {
         template: templates[settings.templatesBase + "home.html"]
     });
 
-    return HomeView;
+    return HomeView;//Function for Home page view.
 });

@@ -21,7 +21,7 @@ function(Backbone, Marionette, settings) {
     		var queryString = this.ui.searchInput.val();
     		var searchURL = "search/" + queryString;
     		Backbone.history.navigate(searchURL, {trigger: true});
-    	}
+    	}//Submit button to search videeos  in Text box.
     });
 
     return HeaderView;

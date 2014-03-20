@@ -9,5 +9,5 @@ function(Marionette, VideoListItemView) {
 		itemView: VideoListItemView
 	});
 
-	return VideoListsView;
+	return VideoListsView;//Function for video list view.
 });

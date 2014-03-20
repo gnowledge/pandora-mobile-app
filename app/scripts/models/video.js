@@ -11,14 +11,14 @@ function(Backbone, settings) {
 			
 
 			this.set("iconURL", this.getIconURL())
-		},
+		},//Function to set videoURL size & icon.
 
 		getVideoURL: function(size) {
-			return settings.pandoraInstance + this.id + "/" + size + "p.mp4";
+			return settings.pandoraInstance + this.id + "/" + size + "p.mp4";//Function to get video player format.
 		},
 
 		getIconURL: function() {
-			return settings.pandoraInstance + this.id + "/" + "icon96.jpg";
+			return settings.pandoraInstance + this.id + "/" + "icon96.jpg";//Function to get video Icon.
 		}
 		
 

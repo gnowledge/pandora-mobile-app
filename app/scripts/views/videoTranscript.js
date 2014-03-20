@@ -9,6 +9,6 @@ function(Marionette, settings, templates) {
 		template: templates[settings.templatesBase + "videoTranscript.html"]
 	});
 
-	return VideoTranscriptView;
+	return VideoTranscriptView;// View Video transcript.
 
 });

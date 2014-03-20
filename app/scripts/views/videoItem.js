@@ -9,6 +9,6 @@ function(Marionette, settings, templates) {
 		template: templates[settings.templatesBase + "videoItem.html"]
 	});
 
-	return VideoItemView;
+	return VideoItemView;//Function for Video item view.
 
 });

@@ -6,16 +6,16 @@ define([
 function(Marionette, Controller) {
     var appRoutes = {
         '': 'home',
-        'signin': 'signin',
-        'video/:id/videoplay/:timing': 'playVideo',
-        'video/:id/videoplay': 'playVideo',
-        'video/:id/info': 'videoInfo',
-        'video/:id/layers': 'videoLayers',
-        'list/:id': 'list',
-        'list/:id/:page': 'list',
-        'search/:query': 'search',
-        'search/:query/:page': 'search',
-        'media/:id': 'media'
+        'signin': 'signin',//User sign in page with email-id & password.
+        'video/:id/videoplay/:timing': 'playVideo',//Video Transcript page with in & out timing.
+        'video/:id/videoplay': 'playVideo',//Video Player Page.
+        'video/:id/info': 'videoInfo',//Video information Page(in detail).
+        'video/:id/layers': 'videoLayers',//List of video Transcripts.
+        'list/:id': 'list',//List of videos page.
+        'list/:id/:page': 'list',//List of videos with Pagination.
+        'search/:query': 'search',//User can search videos.
+        'search/:query/:page': 'search',//Search video with Pagination.
+        
         
     };
 

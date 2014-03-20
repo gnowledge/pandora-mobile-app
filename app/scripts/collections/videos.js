@@ -8,5 +8,5 @@ function(Backbone, Video) {
 		model: Video
 	});
 
-	return Videos;
+	return Videos;//Collection of videos to play video.
 });

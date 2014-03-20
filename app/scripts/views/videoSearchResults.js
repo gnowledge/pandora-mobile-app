@@ -37,5 +37,5 @@ function(Marionette, VideoItemView, settings, templates, pagination) {
         }
 	});
 
-	return VideoSearchResults;
+	return VideoSearchResults;//Search Page with Pagination count number of pages,next page & prev page.
 });

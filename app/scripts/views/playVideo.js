@@ -44,5 +44,5 @@ function(Backbone, Marionette, settings, templates) {
         }
     });
 
-    return PlayVideoView;
+    return PlayVideoView;//Play video transcripts with in & out timing.
 });

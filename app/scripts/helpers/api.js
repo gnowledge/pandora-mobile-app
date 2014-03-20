@@ -28,7 +28,7 @@ function($, settings) {
             this.cache[cacheKey] = $xhr;
 
             return $xhr;
-        };
+        };//Home  Page api.
 
         this.getFeaturedLists = function() {
             var listQuery = {
@@ -45,13 +45,13 @@ function($, settings) {
 
             return this.q("findLists", listQuery);
 
-        }
+        }//List of videos with keys,query,conditions,operator,range,sort.
 
         this.init = function() {
             var data = {};
             var action = "init";
             return this.q(action, data);
-        };
+        };//Initialize api.
 
         this.getVideosInList = function(id, range, keys) {
             if (!range) {
@@ -74,7 +74,7 @@ function($, settings) {
             }
             var action = "find";
             return this.q(action, data);
-        };
+        };//Video list api with query,conditions,operator,range,sort.
 
         this.getVideosSearch = function(queryString, range, keys) {
             if (!range) {
@@ -97,7 +97,7 @@ function($, settings) {
             }
             var action = "find";
             return this.q(action, data);          
-        };
+        };//Video Search api with query,conditions,operator,range,sort.
 
         this.getPlayVideo = function(id) {
             var data= {
@@ -106,7 +106,7 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };
+        };//Video Player api with id.
 
         this.getVideoInfo = function(id) {
             var data= {
@@ -115,17 +115,9 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };
+        };//Video Information api with id.
 
-        this.getMediaInfo = function(id) {
-            var data= {
-                'id':id
-            };
-            var action='get';
-            var $xhr = this.q(action, data);
-            return $xhr;
-        };
-
+        
         this.getVideoLayers = function(id) {
             var data= {
                 'id': id,
@@ -134,7 +126,7 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };
+        };//Video Transcript api with id & keys.
 
         this.signin = function(username, password) {
             var data = {
@@ -144,7 +136,7 @@ function($, settings) {
             var action = "signin";
             var $xhr = this.q(action, data);
             return $xhr;         
-        };
+        };//Sign-in api with username & password.
 
     };
     console.log("api helper", ApiHelper);

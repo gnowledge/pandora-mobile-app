@@ -25,14 +25,14 @@ function(Backbone, Marionette, settings, templates, api, app) {
             $xhr.done(function(response) {
                 console.log("response", response);
                 if (!response.data) {
-                    alert("something bad happened");
+                    alert("something bad happened");//Not responding.
                     return;
                 }
                 if (response.data.errors) {
                     if (response.data.errors.username) {
-                        alert("ERROR: " + response.data.errors.username);
+                        alert("ERROR: " + response.data.errors.username);//Wrong Username. 
                     } else {
-                        alert("ERROR: " + response.data.errors.password);
+                        alert("ERROR: " + response.data.errors.password);//Wrong Password.
                     }
                 } else {
                     var user = response.data.user;
@@ -49,7 +49,7 @@ function(Backbone, Marionette, settings, templates, api, app) {
 
     });
 
-
+//Sign-in page with user-id & password.
 
 
 

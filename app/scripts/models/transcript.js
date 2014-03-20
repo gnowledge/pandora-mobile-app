@@ -7,5 +7,5 @@ function(Layer) {
 
 	});
 
-	return Transcript;
+	return Transcript;//Returns Transcript page.
 });

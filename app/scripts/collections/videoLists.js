@@ -8,5 +8,5 @@ function(Backbone, VideoList) {
 		model: VideoList
 	});
 
-	return VideoLists;
+	return VideoLists;//Collection of video list.
 });

@@ -12,6 +12,6 @@ function(Marionette, settings, templates) {
 
 
 
-	return VideoListItemView;
+	return VideoListItemView;//Function for video list item view.
 
 });

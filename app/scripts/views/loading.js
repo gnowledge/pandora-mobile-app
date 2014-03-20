@@ -10,6 +10,6 @@ function(Backbone, Marionette, settings, templates) {
         template: templates[settings.templatesBase + "loading.html"]
     });
 
-    return LoadingView;
+    return LoadingView;//Function for loading page view.
 
 });

@@ -8,5 +8,5 @@ function(Backbone, settings) {
 
 	});
 
-	return User;
+	return User;//Retuns User Page.
 });

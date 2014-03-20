@@ -7,5 +7,5 @@ function(Layers) {
 
 	});
 	
-	return Transcripts;
+	return Transcripts;//Collection of transcripts.
 });
