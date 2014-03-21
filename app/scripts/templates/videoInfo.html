@@ -2,13 +2,11 @@
 <div id="pad">
 
 <div class="row">
-<div class="large-2 small-6 columns">
-	
-	</br>
+<div class="large-2 small-4 columns" id="video-icons">
 	<a href="#video/{{ id }}/videoplay">
 	<img src="{{ iconURL }}" width="300px"/>
 	</a></br></br>
-	<a class="tiny alert button expand round" href="#video/{{ id }}/videoplay"><b>Play</b></a>
+	<a class=" alert radius label" href="#video/{{ id }}/videoplay"><b>&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</b></a>
 
 </div>
 
@@ -16,8 +14,9 @@
 
 
 
- <div class="large-10 small-6 columns">	
+ <div class="large-10 small-8 columns">	
 	<div id= "data">
+		<div class="panel radius">
 		<a href="#video/{{ id }}/videoplay">
 		<header><h3><b>Title: {{ title }}</b></h3></header></a></br></br>
 
@@ -69,6 +68,7 @@
 							{{ else }}
 								Not available  
 					{{/if}}</br></br>
+	</div>				
 	</div>
 <!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  
 </div>
