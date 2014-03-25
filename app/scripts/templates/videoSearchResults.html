@@ -1,20 +1,22 @@
 <!-- template -Search Video page with Pagination -->  
 
-<div class="paginationInfo">
-    Total results: {{ count }}
-    Displaying results {{ start }} - {{ end }}
-    {{#if prev }}
-        <a href="#search/{{ queryString }}/{{ prev }}">Prev</a>
-    {{/if }}
-    {{ page }}
-    {{#if next }}
-        <a href="#search/{{ queryString }}/{{ next }}">Next</a>
-    {{/if }}
-</div>
 <div class="searchedFor">
-	Results for {{ queryString }}
+    <span class="secondary radius label">Results for "{{ queryString }}"</span>
 </div>
+<div class="paginationInfo">
+    <span class="secondary radius label">Total results: {{ count }}
+    Displaying results {{ start }} - {{ end }} </span></br>
+    {{#if prev }}
+        <a href="#search/{{ queryString }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+    {{/if }}
+    &nbsp;&nbsp;<span class="radius label">{{ page }}</span>&nbsp;&nbsp;
+    {{#if next }}
+        <a href="#search/{{ queryString }}/{{ next }}"><span class="alert radius label">Next</span></a>
+    {{/if }}</br>
+</div>
+<div id="data">
 <div class="videosList">
 
+</div>
 </div>
 

@@ -3,25 +3,25 @@
 <div class="paginationInfo">
 
 
+<span class="secondary radius label">Total Videos: ({{ count }})</span>
+</br>
 
-   List pagination 
-
-Total results: {{ count }}
-    Displaying results {{ start }} - {{ end }}
+ <span class="secondary radius label">Displaying Videos : {{ start }} - {{ end }}</span></br>
     {{#if prev }}
-        <a href="#list/{{ id  }}/{{ prev }}">Prev</a>
+        <a href="#list/{{ id  }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
     {{/if }}
-    {{ page }}
+    <span class="radius label">{{ page }}</span>
     {{#if next }}
-        <a href="#list/{{ id }}/{{ next }}">Next</a>
+        <a href="#list/{{ id }}/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}
 </div>
 
 
 
 	
+<div id="data">
+    <div class="videosList">
 
-<div class="videosList">
-
+    </div>
 </div>
 
