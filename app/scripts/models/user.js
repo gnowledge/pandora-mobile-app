@@ -2,11 +2,11 @@ define([
 	'backbone',
 	'settings'
 ],
-
+//Retuns User Page.
 function(Backbone, settings) {
 	var User = Backbone.Model.extend({
 
 	});
 
-	return User;//Retuns User Page.
+	return User;
 });

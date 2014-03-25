@@ -5,6 +5,7 @@ define([
     "templates"
 ],
 
+//Play video transcripts with in & out timing.
 function(Backbone, Marionette, settings, templates) {
     var PlayVideoView = Marionette.ItemView.extend({
         template: templates[settings.templatesBase + "playVideo.html"],
@@ -44,5 +45,5 @@ function(Backbone, Marionette, settings, templates) {
         }
     });
 
-    return PlayVideoView;//Play video transcripts with in & out timing.
+    return PlayVideoView;
 });

@@ -4,11 +4,11 @@ define([
     "templates"
 ],
 
+//Function for Video item view.
 function(Marionette, settings, templates) {
 	var VideoItemView = Marionette.ItemView.extend({
 		template: templates[settings.templatesBase + "videoItem.html"]
 	});
 
-	return VideoItemView;//Function for Video item view.
-
+	return VideoItemView;
 });

@@ -2,7 +2,7 @@ define([
 	'backbone',
 	'settings'
 ],
-
+//Function to set videoURL size & icon.
 function(Backbone, settings) {
 	var Video = Backbone.Model.extend({
 		initialize: function() {
@@ -11,11 +11,13 @@ function(Backbone, settings) {
 			
 
 			this.set("iconURL", this.getIconURL())
-		},//Function to set videoURL size & icon.
+		},
 
 		getVideoURL: function(size) {
-			return settings.pandoraInstance + this.id + "/" + size + "p.mp4";//Function to get video player format.
-		},
+		
+		return settings.pandoraInstance + this.id + "/" + size + "p.mp4";/*Function to get
+		                                                              video player format.*/    
+		},																	
 
 		getIconURL: function() {
 			return settings.pandoraInstance + this.id + "/" + "icon96.jpg";//Function to get video Icon.

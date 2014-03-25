@@ -3,6 +3,7 @@ define([
     'settings'
 ],
 
+//Home  Page api.
 function($, settings) {
     var ApiHelper = function() {
         var instanceBase = settings.pandoraInstance;
@@ -28,8 +29,9 @@ function($, settings) {
             this.cache[cacheKey] = $xhr;
 
             return $xhr;
-        };//Home  Page api.
+        };
 
+//List of videos with keys,query,conditions,operator,range,sort.
         this.getFeaturedLists = function() {
             var listQuery = {
                 "keys": ["user","name","items","type","status","id","modified","query"],
@@ -45,14 +47,16 @@ function($, settings) {
 
             return this.q("findLists", listQuery);
 
-        }//List of videos with keys,query,conditions,operator,range,sort.
+        }
+//Initialize api.
 
         this.init = function() {
             var data = {};
             var action = "init";
             return this.q(action, data);
-        };//Initialize api.
+        };
 
+//Video list api with query,conditions,operator,range,sort.
         this.getVideosInList = function(id, range, keys) {
             if (!range) {
                 range = [0, 50];
@@ -74,8 +78,9 @@ function($, settings) {
             }
             var action = "find";
             return this.q(action, data);
-        };//Video list api with query,conditions,operator,range,sort.
+        };
 
+//Video Search api with query,conditions,operator,range,sort.
         this.getVideosSearch = function(queryString, range, keys) {
             if (!range) {
                 range = [0, 50];
@@ -97,8 +102,9 @@ function($, settings) {
             }
             var action = "find";
             return this.q(action, data);          
-        };//Video Search api with query,conditions,operator,range,sort.
+        };
 
+//Video Player api with id.
         this.getPlayVideo = function(id) {
             var data= {
                 'id':id
@@ -106,8 +112,9 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };//Video Player api with id.
+        };
 
+//Video Information api with id.
         this.getVideoInfo = function(id) {
             var data= {
                 'id':id
@@ -115,9 +122,9 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };//Video Information api with id.
+        };
 
-        
+  //Video Transcript api with id & keys.      
         this.getVideoLayers = function(id) {
             var data= {
                 'id': id,
@@ -126,8 +133,9 @@ function($, settings) {
             var action='get';
             var $xhr = this.q(action, data);
             return $xhr;
-        };//Video Transcript api with id & keys.
+        };
 
+//Sign-in api with username & password.
         this.signin = function(username, password) {
             var data = {
                 username: username,
@@ -136,8 +144,7 @@ function($, settings) {
             var action = "signin";
             var $xhr = this.q(action, data);
             return $xhr;         
-        };//Sign-in api with username & password.
-
+        };
     };
     console.log("api helper", ApiHelper);
     //return {'hello': 'hi'};

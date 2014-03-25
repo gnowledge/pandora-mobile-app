@@ -3,7 +3,7 @@ define([
 	'views/videoTranscript',
     'views/emptyTranscript'
 ],
-
+//Empty transcript view.
 function(Marionette, VideoTranscriptView, EmptyTranscriptView) {
 
 	var VideoTranscriptsView = Marionette.CollectionView.extend({
@@ -11,5 +11,5 @@ function(Marionette, VideoTranscriptView, EmptyTranscriptView) {
         emptyView: EmptyTranscriptView
 	});
 
-	return VideoTranscriptsView;//Empty transcript view.
+	return VideoTranscriptsView;
 });

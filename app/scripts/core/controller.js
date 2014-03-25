@@ -7,7 +7,7 @@ define([
     "views/loading",
     "settings"
 ],
-
+//Function of Home Page.
 function($, require, Backbone, HomeView, api, LoadingView, settings) {
     var loadingView = new LoadingView();
     return {
@@ -31,8 +31,8 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);
                 });
             });    
-        },//Function of Home Page.
-
+        },
+//Function to play  video.
         'playVideo': function(id, timing){
             var $xhr = api.getPlayVideo(id);
             var app = require('app');
@@ -51,8 +51,8 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);     
                 });
             })
-        },//Function to play  video.
-
+        },
+//Function of list videos with pagination.
         'list': function(id, page) {
             if (!page) {
                 page = 0;
@@ -61,9 +61,10 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
             var endRange = startRange + settings.pageSize;
             var range = [startRange, endRange];
             //first xhr request only fetches number of results, etc.
-            var $xhr = api.getVideosInList(id, range);
+          
             var app = require('app');
             app.content.show(loadingView);
+              var $xhr = api.getVideosInList(id, range);
             $xhr.done(function(response) {
                 var videosCount = response.data.items;
                 var $xhr2 = api.getVideosInList(id, range, ['id', 'title']);
@@ -78,14 +79,15 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                         var view = new VideoListView({
                             collection: videosCollection,
                             count: videosCount,
-                            page: page
+                            page: page,
+                            id:id
                         });
                         app.content.show(view);
                     });
                 });
             });    
-        },//Function of list videos with pagination.
-
+        },
+//Function of search video page with pagination.
         'search': function(queryString, page) {
             if (!page) {
                 page = 0;
@@ -118,8 +120,8 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     });
                 });
             });    
-        },//Function of search video page with pagination.
-
+        },
+//Function of video Information (in detail).
         'videoInfo': function(id){
             var app = require('app');
             app.content.show(loadingView);
@@ -137,9 +139,9 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);     
                 });
             })
-        },//Function of video Information (in detail).
+        },
 
-
+//Function of list video Transcripts.
         'videoLayers': function(id) {
             var app = require('app');
             app.content.show(loadingView);
@@ -160,9 +162,9 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     app.content.show(view);
                 });
             });
-        },//Function of list video Transcripts.
+        },
 
-
+//Function of sign-in page with email-id & password.
         'signin': function() {
             require([
                 'views/signin',
@@ -171,7 +173,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                 var signinView = new SigninView();
                 app.content.show(signinView);
             });
-        }//Function of sign-in page with email-id & password.
+        }
         
         
 

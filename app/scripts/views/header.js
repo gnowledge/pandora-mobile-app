@@ -16,12 +16,14 @@ function(Backbone, Marionette, settings) {
     	initialize: function() {
     		this.bindUIElements();
     	},
+
+        //Submit button to search videeos  in Text box.
     	submitSearch: function(e) {
     		e.preventDefault();
     		var queryString = this.ui.searchInput.val();
     		var searchURL = "search/" + queryString;
     		Backbone.history.navigate(searchURL, {trigger: true});
-    	}//Submit button to search videeos  in Text box.
+    	}
     });
 
     return HeaderView;

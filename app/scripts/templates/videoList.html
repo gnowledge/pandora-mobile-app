@@ -1,8 +1,27 @@
+<!-- template for List of videos page with pagination -->  
+
 <div class="paginationInfo">
-    pagination goes here
+
+
+
+   List pagination 
+
+Total results: {{ count }}
+    Displaying results {{ start }} - {{ end }}
+    {{#if prev }}
+        <a href="#list/{{ id  }}/{{ prev }}">Prev</a>
+    {{/if }}
+    {{ page }}
+    {{#if next }}
+        <a href="#list/{{ id }}/{{ next }}">Next</a>
+    {{/if }}
 </div>
+
+
+
+	
+
 <div class="videosList">
 
 </div>
 
-<!-- template for List of videos page with pagination -->  

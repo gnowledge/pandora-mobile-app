@@ -6,6 +6,7 @@ define([
     "helpers/pagination"
 ],
 
+//Search Page with Pagination count number of pages,next page & prev page.
 function(Marionette, VideoItemView, settings, templates, pagination) {
 	var VideoSearchResults = Marionette.CompositeView.extend({
         initialize: function(options) {
@@ -42,5 +43,5 @@ function(Marionette, VideoItemView, settings, templates, pagination) {
         }
 	});
 
-	return VideoSearchResults;//Search Page with Pagination count number of pages,next page & prev page.
+	return VideoSearchResults;
 });

@@ -7,6 +7,7 @@ define([
     "app"
 ],
 
+//Sign-in page with user-id & password.
 function(Backbone, Marionette, settings, templates, api, app) {
     var SigninView = Marionette.ItemView.extend({
         template: templates[settings.templatesBase + "signin.html"],
@@ -49,7 +50,7 @@ function(Backbone, Marionette, settings, templates, api, app) {
 
     });
 
-//Sign-in page with user-id & password.
+
 
 
 
