@@ -2,6 +2,9 @@
 
 <div class="paginationInfo">
 
+<div class="Titlelist">
+   <h4> Title:[{{ id }}] </h4>
+</div>
 
 <span class="secondary radius label">Total Videos: ({{ count }})</span>
 </br>
@@ -10,7 +13,7 @@
     {{#if prev }}
         <a href="#list/{{ id  }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
     {{/if }}
-    <span class="radius label">{{ page }}</span>
+    <span class="radius label">Page:{{ page }}</span>
     {{#if next }}
         <a href="#list/{{ id }}/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}

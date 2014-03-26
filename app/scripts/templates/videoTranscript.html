@@ -1,7 +1,10 @@
 <!-- template  for transcript page  -->  
 
 <div class="row">
+	
 		<div class="large-2 small-4 columns" id="video-icons">
+        <span class="secondary radius label"><align="left"><b>Title:</b> {{ id }} <br /></span>
+
 			<a href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}">
 			<img src="{{ inIcon }}" />
 			</a></br></br>
@@ -14,7 +17,15 @@
 				<b>Duration:</b> {{ duration }} <br />
 				<b>In:</b> {{ in }} <br />
 				<b>Out:</b> {{ out }} <br />
-				<b>Value:</b> {{{ value }}}</br><hr>
+				
+
+                   <b>Value:</b> 
+				{{#if value }} 
+							{{ value }}
+					{{ else }} 
+							Not available  
+				{{/if}}</br></br><hr>
+
 				</div>
 			</div>
 		</div>

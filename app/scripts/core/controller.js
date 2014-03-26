@@ -138,7 +138,7 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     });
                     app.content.show(view);     
                 });
-            })
+            });
         },
 
 //Function of list video Transcripts.
