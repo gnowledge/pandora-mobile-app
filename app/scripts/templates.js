@@ -285,11 +285,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/info\"><span class=\"[success alert secondary] [round radius] label\"><b>[ Video Info ]</b></span></a>&nbsp;&nbsp;&nbsp;\n		    <a href=\"#video/";
+    + "/info\"><span class=\"alert radius label\"><b>[ Video Info ]</b></span></a>&nbsp;&nbsp;&nbsp;\n		    <a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers\"><span class=\"[success alert secondary] [round radius] label\"><b>[ Transcript ]</b></span></a>\n			<hr>\n		</div>\n</div>\n\n</div>\n\n";
+    + "/layers\"><span class=\"alert radius label\"><b>[ Transcript ]</b></span></a>\n			<hr>\n		</div>\n</div>\n\n</div>\n\n";
   return buffer;
   });
 
@@ -328,11 +328,11 @@ function program3(depth0,data) {
   return buffer;
   }
 
-  buffer += "<!-- template for List of videos page with pagination -->  \n\n<div class=\"paginationInfo\">\n\n<div class=\"Titlelist\">\n   <h4> Title:[";
+  buffer += "<!-- template for List of videos page with pagination -->  \n\n<div class=\"paginationInfo\">\n\n<div class=\"Titlelist\">\n   <span class=\"secondary radius label title\">";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "] </h4>\n</div>\n\n<span class=\"secondary radius label\">Total Videos: (";
+    + "</span>\n</div>\n\n<span class=\"secondary radius label\">Total Videos: (";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.count); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
