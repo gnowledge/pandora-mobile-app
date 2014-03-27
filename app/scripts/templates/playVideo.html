@@ -3,21 +3,35 @@
 
 <div id="videopage">
 <header>
-	<h5><b>{{ title }}</b></h5>
+	<h5><b><span data-tooltip class="has-tip" title="Video Title-[{{ title }}]"style=""> {{ title }}</span></b></h5>
 </header>
 
-<div class="flex-video widescreen vimeo"> 
+
+
+
+
+<div class="flex-video widescreen vimeo" > 
 	<iframe src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+
+
+
+
 	</iframe> 
 
 
-</div>
+
+
+
+
+
 
 </div>
 
-    <a href="#video/{{ id }}/info"><span class="alert radius label">
+</div>
+
+    <a href="#video/{{ id }}/info"><span class="alert radius label" title="Video Information">
 	<b>[ Video Info ]</b></span></a>&nbsp;&nbsp;&nbsp;
-		    <a href="#video/{{ id }}/layers"><span class="alert radius label"><b>[ Transcript ]</b></span></a>
+		    <a href="#video/{{ id }}/layers"><span class="alert radius label" title="Video Transcript"><b>[ Transcript ]</b></span></a>
 		</br></br>
 
 
