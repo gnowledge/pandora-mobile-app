@@ -2,6 +2,8 @@
 
 <div class="searchedFor">
     <span class="secondary radius label">Results for "{{ queryString }}"</span>
+    <a href="#Top">Down Page </a>
+   <h2><a id="Down"></a></h2>
 </div>
 <div class="paginationInfo">
     <span class="secondary radius label">Total results: {{ count }}
@@ -20,3 +22,26 @@
 </div>
 </div>
 
+
+<h2><a id="Top"></a></h2>
+
+<a href="#Down">Top Page </a>
+
+
+
+
+<div class="searchedFor">
+    <span class="secondary radius label">Results for "{{ queryString }}"</span>
+    
+</div>
+<div class="paginationInfo">
+    <span class="secondary radius label">Total results: {{ count }}
+    Displaying results {{ start }} - {{ end }} </span></br>
+    {{#if prev }}
+        <a href="#search/{{ queryString }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+    {{/if }}
+    &nbsp;&nbsp;<span class="radius label">{{ page }}</span>&nbsp;&nbsp;
+    {{#if next }}
+        <a href="#search/{{ queryString }}/{{ next }}"><span class="alert radius label">Next</span></a>
+    {{/if }}</br>
+</div>
