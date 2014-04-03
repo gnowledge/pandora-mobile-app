@@ -36,7 +36,12 @@ function(settings) {
 
         //Pagination for End page.
         getEnd: function(page, count) {
-            return (page * settings.pageSize) + settings.pageSize;
+            var end = (page * settings.pageSize) + settings.pageSize;
+            if (end > count) {
+                return count;
+            } else {
+                return end;
+            }
             //TODO: FIXME!!! This will give the wrong end if the person is on the last page.
             
         }

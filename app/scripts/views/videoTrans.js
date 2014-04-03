@@ -21,6 +21,9 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates, p
             this.count = this.collection.length;
             this.start = this.page * 15;
             this.end = (this.page + 1) * 15;
+            if (this.count < this.end) {
+                this.end = this.count;
+            }
             this.next = this.count > this.end ? this.page + 1 : false;
             this.prev = this.start > 0 ? (this.page - 1).toString() : false;
             //GLOB = this.collection;

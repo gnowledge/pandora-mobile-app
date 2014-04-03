@@ -69,7 +69,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</span></b></h5>\n</header>\n\n\n\n\n   <script type=\"text/javascript\" \n   src=\"/jquery/jquery-1.3.2.min.js\"></script>\n   <script type=\"text/javascript\" language=\"javascript\">\n   \n   $(document).ready(function() {\n\n     $(\"#show\").click(function () {\n        $(\".mydiv\").show( 1000 );\n     });\n\n     $(\"#hide\").click(function () {\n        $(\".mydiv\").hide( 1000 );\n     });\n\n   });\n\n   </script>\n\n\n   <div class=\"mydiv\">\n      <div class=\"flex-video widescreen vimeo\" > \n	<iframe src=\"";
+    + "</span></b></h5>\n</header>\n\n\n\n\n   <script type=\"text/javascript\" \n   src=\"/jquery/jquery-1.3.2.min.js\"></script>\n   <script type=\"text/javascript\" language=\"javascript\">\n   \n   $(document).ready(function() {\n\n     $(\"#show\").click(function () {\n        $(\".mydiv\").show( 1000 );\n     });\n\n     $(\"#hide\").click(function () {\n        $(\".mydiv\").hide( 1000 );\n     });\n\n   });\n\n   </script>\n\n\n   <div class=\"mydiv\">\n      <div class=\"flex-video widescreen vimeo\" > \n        <video src=\"";
   if (stack1 = helpers.videoURL96) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.videoURL96); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -77,7 +77,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.iconURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.iconURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\" controls width=\"400\" height=\"225\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen>\n\n\n	</iframe> \n   </div></div>\n\n   <input id=\"hide\" type=\"button\" value=\"Hide\" alt=\"Hide Video \"/ style=\"color:Red\">   \n   <input id=\"show\" type=\"button\" value=\"Show\" alt=\"Show Video\" /style=\"color:Green\" >   \n\n\n</div>\n<br>\n    <a href=\"#video/";
+    + "\" controls></video>\n	<!-- <iframe src=\"";
+  if (stack1 = helpers.videoURL96) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.videoURL96); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" id=\"pandoraVideo\" poster=\"";
+  if (stack1 = helpers.iconURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.iconURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" controls width=\"400\" height=\"225\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen>\n\n\n	</iframe> --> \n   </div></div>\n\n   <input id=\"hide\" type=\"button\" value=\"Hide\" alt=\"Hide Video \"/ style=\"color:Red\">   \n   <input id=\"show\" type=\"button\" value=\"Show\" alt=\"Show Video\" /style=\"color:Green\" >   \n\n\n</div>\n<br>\n    <a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -361,8 +369,8 @@ function program3(depth0,data) {
   }
 
   buffer += "<!-- template for List of videos page with pagination -->  \n\n<div class=\"paginationInfo\">\n\n<div class=\"Titlelist\">\n\n   <H3><b>";
-  if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
     + "</b></H3>\n\n</div>\n\n<span class=\"tiny secondary round label\">Total Videos: (";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }

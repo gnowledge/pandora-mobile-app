@@ -14,7 +14,7 @@ function(Marionette, VideoItemView, settings, templates, pagination) {
             this.count = parseInt(options.count);
             this.page = parseInt(options.page);
             this.id = options.id;
-            
+            this.title = this.id.split(":")[1] //FIXME: if there is a colon in the title, this breaks.
         },
 
         template: templates[settings.templatesBase + "videoList.html"],
@@ -41,7 +41,8 @@ function(Marionette, VideoItemView, settings, templates, pagination) {
                 'prev': prev,
                 'start': start,
                 'end': end,
-                'id': this.id
+                'id': this.id,
+                'title': this.title
                 
             }    
         }
