@@ -8,11 +8,14 @@ function(Backbone, settings) {
 		initialize: function() {
 			this.set("videoURL96", this.getVideoURL("96"));
 			this.set("videoURL240", this.getVideoURL("240"));
-			
+			this.set("shareURL", this.getShareURL());
 
 			this.set("iconURL", this.getIconURL())
 		},
 
+		getShareURL: function() {
+			return settings.pandoraInstance + this.id;
+		},
 		getVideoURL: function(size) {
 		
 		return settings.pandoraInstance + this.id + "/" + size + "p.mp4";/*Function to get
