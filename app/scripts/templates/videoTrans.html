@@ -1,8 +1,14 @@
 <div class="paginationInfo">
 
 
+<div class="TitleTrans">
 
+   <H3><b>Title:{{ id }}</b></H3>
 
+</div>
+
+    <a href="#Top">Down Page </a>
+   <h2><a id="Down"></a></h2>
 
 <span class="secondary radius label">Total transcripts: ({{ count }})</span>
 </br>
@@ -23,10 +29,38 @@
 <div id="data">
     <div class="videosTranscript">
 
+
+
+<a href="#video/{{ id }}/info"><span class="alert radius label">
+    <b>[ Video Info ]</b></span></a>
+            
     </div>
     
 </div>
 
+<h2><a id="Top"></a></h2>
+
+<a href="#Down">Top Page </a>
+
+
+<div class="paginationInfo">
+
+
+
+
+
+<span class="secondary radius label">Total transcripts: ({{ count }})</span>
+</br>
+
+ <span class="secondary radius label">Displaying transcripts : {{ start }} - {{ end }}</span></br>
+    {{#if prev }}
+        <a href="#video/{{ id  }}/layers/{{ prev }}"><span class="alert radius label">Prev</span></a>
+    {{/if }}
+    <span class="radius label">Page:{{ page }}</span>
+    {{#if next }}
+        <a href="#video/{{ id }}/layers/{{ next }}"><span class="alert radius label">Next</span></a>
+    {{/if }}
+</div>
 
 
 

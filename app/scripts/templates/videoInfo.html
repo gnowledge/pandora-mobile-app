@@ -5,9 +5,9 @@
 <div class="row">
 <div class="large-2 small-4 columns" id="video-icons">
 	<a href="#video/{{ id }}/videoplay">
-	<img src="{{ iconURL }}" alt="videoPlay" title="Play video" width="300px"/>
+	<img src="{{ iconURL }}" width="300px"/>
 	</a></br></br>
-	<a class=" alert radius label" href="#video/{{ id }}/videoplay" title="Video Play"><b>&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</b></a>
+	<a class=" alert radius label" href="#video/{{ id }}/videoplay"><b>&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</b></a>
 
 </div>
 
@@ -19,55 +19,55 @@
 	<div id= "data">
 		<div class="panel radius">
 		<a href="#video/{{ id }}/videoplay">
-		<header><h3><b>Title:<span data-tooltip class="has-tip" title="Title-[{{ title }}]" style =""> {{ title }}</b></h3></header></a></br></br>
+		<header><h3><b>Title:{{ title }}</b></h3></header></a></br></br>
           
 
 
 		<b>Project:</b> 
 				{{#if project }} 
-					<span data-tooltip class="has-tip" title="Project-[{{ project }}]" style ="">{{ project }}</span>
-					{{ else }} 
+					{{ project }}
+										{{ else }} 
 							Not available  
 				{{/if}}</br></br>
 
 		<b>Topic:</b> 
 					{{#if topic }} 
-					<span data-tooltip class="has-tip" title="Topic-[{{ topic }}]" style ="">		{{ topic }}</span>		
+							{{ topic }}	
 						{{ else }} 
 							Not available  
 					{{/if}}</br></br>
 
 		<b>Location:</b> 
 					{{#if location }} 
-					<span data-tooltip class="has-tip" title="Location-[{{ location }}]" style ="">		{{ location }}</span>			
+					{{ location }}		
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
 		<b>Date:</b> 
 					{{#if date }}                           
-					<span data-tooltip class="has-tip" title="Date-[{{ date }}]" style ="">		{{ date }}</span>		
+						{{ date }}	
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
 		<b>Language:</b> 
 					{{#if language }} 
-					<span data-tooltip class="has-tip" title="Language-[{{ language }}]" style ="">		{{ language }}</span>			
+						{{ language }}		
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
 		<b>Director:</b>
 						{{#if director }} 
-					<span data-tooltip class="has-tip" title="Director-[{{ director }}]" style ="">		{{ director }}</span>			
+						{{ director }}		
 								{{ else }} 
 									Not available  
 						{{/if}}</br></br>
 
 		<b>Summary:</b>
 					{{#if summary }} 
-						<span data-tooltip class="has-tip" title="Summary" style ="">		{{{ summary }}}</span>	
+							{{{ summary }}}
 							{{ else }}
 								Not available  
 					{{/if}}</br></br>
