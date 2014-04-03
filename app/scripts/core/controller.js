@@ -142,26 +142,49 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
         },
 
 //Function of list video Transcripts.
-        'videoLayers': function(id) {
+        'videoLayers': function(id,page) {
+        if (!page) {
+                page = 0;
+            }
+
+            var startRange = page * settings.pageSize;
+            var endRange = startRange + settings.pageSize;
+            var range = [startRange, endRange];
+            //first xhr request only fetches number of results, etc.
+
             var app = require('app');
             app.content.show(loadingView);
-            console.log("video layers function", id)
-            var $xhr = api.getVideoLayers(id);
+            // //console.log("video layers function", id)
+            // var $xhr = api.getVideoLayers(id,range);
+            // $xhr.done(function(response) {
+
+            
+            var $xhr = api.getVideoLayers(id, range, ['id', 'title']);
             $xhr.done(function(response) {
+                var layersData = response.data.layers.transcripts; 
+                console.log("layersData", layersData);   
+                //var videosCount = response.data.items.length;
+
                 console.log(response);
                 require([
                     'collections/transcripts',
-                    'views/videoTranscripts',
+                    'views/videoTrans',
                 ], function(Transcripts, VideoTranscriptsView) {
-                    var data = response.data.layers.transcripts;
-                    var transcripts = new Transcripts(data);
-                    console.log(transcripts);
+                    //console.log("videos in this list", videosData);
+                    var transcripts = new Transcripts(layersData)
+                    //var videosCollection = new Videos(videosData);
                     var view = new VideoTranscriptsView({
-                        collection: transcripts
+                        collection: transcripts,
+                        //count: videosCount,
+                        page: page,
+                        id:id,
+                        //layers:layers
                     });
+
                     app.content.show(view);
                 });
             });
+      
         },
 
 //Function of sign-in page with email-id & password.

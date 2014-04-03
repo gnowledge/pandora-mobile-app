@@ -1,0 +1,34 @@
+<div class="paginationInfo">
+
+
+
+
+
+<span class="secondary radius label">Total transcripts: ({{ count }})</span>
+</br>
+
+ <span class="secondary radius label">Displaying transcripts : {{ start }} - {{ end }}</span></br>
+    {{#if prev }}
+        <a href="#video/{{ id  }}/layers/{{ prev }}"><span class="alert radius label">Prev</span></a>
+    {{/if }}
+    <span class="radius label">Page:{{ page }}</span>
+    {{#if next }}
+        <a href="#video/{{ id }}/layers/{{ next }}"><span class="alert radius label">Next</span></a>
+    {{/if }}
+</div>
+
+
+
+	
+<div id="data">
+    <div class="videosTranscript">
+
+    </div>
+    
+</div>
+
+
+
+
+
+

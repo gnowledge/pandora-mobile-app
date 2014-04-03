@@ -9,26 +9,39 @@
 
 
 
+   <script type="text/javascript" 
+   src="/jquery/jquery-1.3.2.min.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+   $(document).ready(function() {
 
-<div class="flex-video widescreen vimeo" > 
+     $("#show").click(function () {
+        $(".mydiv").show( 1000 );
+     });
+
+     $("#hide").click(function () {
+        $(".mydiv").hide( 1000 );
+     });
+
+   });
+
+   </script>
+
+
+   <div class="mydiv">
+      <div class="flex-video widescreen vimeo" > 
 	<iframe src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 
 
-
-
 	</iframe> 
+   </div></div>
 
-
-
-
-
-
+   <input id="hide" type="button" value="Hide" alt="Hide Video "/ style="color:Red">   
+   <input id="show" type="button" value="Show" alt="Show Video" /style="color:Green" >   
 
 
 </div>
-
-</div>
-
+<br>
     <a href="#video/{{ id }}/info"><span class="alert radius label" title="Video Information">
 	<b>[ Video Info ]</b></span></a>&nbsp;&nbsp;&nbsp;
 		    <a href="#video/{{ id }}/layers"><span class="alert radius label" title="Video Transcript"><b>[ Transcript ]</b></span></a>

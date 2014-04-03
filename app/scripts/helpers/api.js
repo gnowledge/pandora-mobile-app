@@ -125,7 +125,7 @@ function($, settings) {
         };
 
   //Video Transcript api with id & keys.      
-        this.getVideoLayers = function(id) {
+        this.getVideoLayers = function(id,keys) {
             var data= {
                 'id': id,
                 'keys': ['layers']

@@ -8,5 +8,5 @@ function(Backbone, Layer) {
 		model: Layer
 	});
 
-	return Layers;//Collection of layers.
+	return Layers;//Collection of layers .
 });
