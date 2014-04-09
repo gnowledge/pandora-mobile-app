@@ -65,3 +65,15 @@
     .title{
         font-size: 20px;
     }
+
+    #down-arrow{
+        position:absolute;
+        top:relative;
+        right:5px;
+    }
+
+    #top-arrow{
+        position:absolute;
+        bottom:relative;
+        right:5px;
+    }

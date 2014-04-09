@@ -7,8 +7,13 @@
 
 </div>
 
-    <a href="#Top">Down Page </a>
-   <h2><a id="Down"></a></h2>
+
+<div id="down-arrow">
+    <a href="#Top"><i class="fi-arrow-down icon-style" ></i></a>
+    <h2><a id="Down"></a></h2>
+</div>
+    
+
 
 <span class="secondary radius label">Total transcripts: ({{ count }})</span>
 </br>
@@ -22,25 +27,27 @@
         <a href="#video/{{ id }}/layers/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}
 </div>
+      
 
+       
 
 
 	
 <div id="data">
     <div class="videosTranscript">
-
-
-
-<a href="#video/{{ id }}/info"><span class="alert radius label">
-    <b>[ Video Info ]</b></span></a>
-            
+        <center><a href="#video/{{ id }}/info" class="alert radius label">
+        <b>[ Video Info ]</b></a></center>
+        
     </div>
-    
+        <center><a href="#video/{{ id }}/info" class="alert radius label">
+        <b>[ Video Info ]</b></a></center>
 </div>
 
-<h2><a id="Top"></a></h2>
 
-<a href="#Down">Top Page </a>
+<div id="top-arrow">
+    <h2><a id="Top"></a></h2>
+    <a href="#Down"><i class="fi-arrow-up icon-style"></i></a>
+</div>
 
 
 <div class="paginationInfo">
