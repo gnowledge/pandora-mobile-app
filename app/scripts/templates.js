@@ -230,7 +230,11 @@ function program23(depth0,data) {
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/videoplay\"><b>&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</b></a>\n\n</div>\n\n\n\n\n<!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  \n <div class=\"large-10 small-8 columns\">	\n	<div id= \"data\">\n		<div class=\"panel radius\">\n		<a href=\"#video/";
+    + "/videoplay\"><b><pre>   Play   </pre></b></a>\n</br><br>\n	<a href=\"#video/";
+  if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "/layers\"><span class=\"alert radius label\"><b>[Transcripts]</b></span></a>\n\n</div>\n\n\n\n\n<!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  \n <div class=\"large-10 small-8 columns\">	\n	<div id= \"data\">\n		<div class=\"panel radius\">\n		<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
