@@ -26,7 +26,6 @@ function (_, Backbone, Marionette, Router, HeaderView) {
 
     // Add as many of these as you like
     App.addInitializer(function () {
-        console.log("app started");
         $(document).foundation();
         Backbone.history.start({ root: App.root });
     });

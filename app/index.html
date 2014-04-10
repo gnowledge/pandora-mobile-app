@@ -14,6 +14,13 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
      <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+     <script src="cordova.js"></script>
+
+     <script>
+        window.globalConfig = {};
+        window.globalConfig.platform = "web";
+     </script>
+
      <script src="js/modernizr.js"></script>
     
     <!-- Point to the require script -->
@@ -50,7 +57,7 @@
 
             <div class="large-2 small-2 columns">
               <li class="has-form">
-                  <i class="step fi-power icon-style"  onclick="exitFromApp()"></i>
+                  <i class="step fi-power icon-style" id="exitButton"></i>
               </li>
             </div>
        </ul>
@@ -62,18 +69,6 @@
 
     <div id="content"></div>
 
-    
-    <script src="js/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    <script type="text/javascript">
-      function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
-    </script>
 
 </body>
 </html>

@@ -23,7 +23,6 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                     'views/videoLists',
                     'app'
                 ], function(VideoLists, VideoListsView, app) {
-                    console.log("home route", listItems);
                     var videoLists = app.videoLists = new VideoLists(listItems);
                     var view = new VideoListsView({
                         collection: videoLists
@@ -74,7 +73,6 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                         'collections/videos',
                         'views/videoList'
                     ],function(Videos, VideoListView) {
-                        console.log("videos in this list", videosData);
                         var videosCollection = new Videos(videosData);
                         var view = new VideoListView({
                             collection: videosCollection,

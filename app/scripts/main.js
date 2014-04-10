@@ -9,9 +9,17 @@ function ($, Backbone, App) {
 
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
-    $(document).ready(function() {
-        App.start();
-    });
+    var platform = window.globalConfig.platform;
+    if (platform === 'web') {
+        $(document).ready(function() {
+            App.start();
+        });        
+    } else {
+        document.addEventListener("deviceready", function() {
+            App.start();
+        }, true);
+    }
+
 
     // Trigger the initial route and enable HTML5 History API support
     //Backbone.history.start({ pushState: true, root: App.root });
