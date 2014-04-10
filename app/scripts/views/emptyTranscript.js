@@ -12,3 +12,18 @@ function(Marionette, settings, templates) {
     return EmptyTranscriptView;
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<!-- template for Empty video transcript -->  \n\n<div class=\"panel\">\n	<h2><i class=\"fi-skull icon-style\" ></i></h2>\n<H2>No transcripts for this video.</H2>\n</div>\n";
+  return "<!-- template for Empty video transcript -->  \n\n<div class=\"panel\">\n	<h2><i class=\"fi-skull icon-style\" ></i></h2>\n<H2>No transcripts for this video.</H2>\n\n\n</div>\n";
   });
 
 this["JST"]["app/scripts/templates/home.html"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

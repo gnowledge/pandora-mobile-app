@@ -5,11 +5,14 @@ define([
     'views/videoTranscript',
     'settings',
     'templates',
-    "helpers/pagination"
+    'views/videoTranscripts',
+    "helpers/pagination",
+    
+
 ],
 
 //Function for video list view with pagination.
-function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates, pagination) {
+function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,EmptyTranscriptView, pagination) {
 
     var VideoTransView = Marionette.CompositeView.extend({
          initialize: function(options) {
@@ -35,9 +38,22 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates, p
 
         template: templates[settings.templatesBase + "videoTrans.html"],
         itemView: VideoTranscriptView,
+        emptyView: EmptyTranscriptView,
+        //pagView:VideoTransView,
         appendHtml: function(collectionView, itemView) {
             collectionView.$('.videosTranscript').append(itemView.el);    
         },
+
+
+        //appendHtml: function(collectionView,emptyView) {
+         //   collectionView.$('.emptyTranscript').append(emptyView.el);    
+       // },
+
+
+     
+
+
+
 
         templateHelpers: function() {
             var numPages = pagination.getNumPages(this.count);
