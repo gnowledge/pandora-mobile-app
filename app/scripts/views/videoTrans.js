@@ -33,6 +33,7 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
             } else {
                 this.otherTyp = 'transcripts';
             }
+            this.title = options.title;
             this.next = this.count > this.end ? this.page + 1 : false;
             this.prev = this.start > 0 ? (this.page - 1).toString() : false;
             //GLOB = this.collection;
@@ -78,7 +79,8 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
                 'end': this.end,
                 'id': this.id,
                 'typ': this.typ,
-                'otherTyp': this.otherTyp
+                'otherTyp': this.otherTyp,
+                'title': this.title
                 //'layers':this.layers
                 
             }    

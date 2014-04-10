@@ -145,9 +145,9 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                 page = 0;
             }
             console.log("typ", typ);
-            var startRange = page * settings.pageSize;
-            var endRange = startRange + settings.pageSize;
-            var range = [startRange, endRange];
+            //var startRange = page * settings.pageSize;
+            //var endRange = startRange + settings.pageSize;
+            //var range = [startRange, endRange];
             //first xhr request only fetches number of results, etc.
 
             var app = require('app');
@@ -157,9 +157,11 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
             // $xhr.done(function(response) {
 
             
-            var $xhr = api.getVideoLayers(id, range, ['id', 'title']);
+            var $xhr = api.getVideoLayers(id, ['id', 'title', 'layers']);
             $xhr.done(function(response) {
-                var layersData = response.data.layers[typ]; 
+                var layersData = response.data.layers[typ];
+                console.log("find title in this", response);
+                var title = response.data.title;
                 //console.log("layersData", layersData);   
                 //var videosCount = response.data.items.length;
 
@@ -175,7 +177,8 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
                         collection: layers,
                         typ: typ,
                         page: page,
-                        id:id
+                        id:id,
+                        title: title
                         //layers:layers
                     });
 

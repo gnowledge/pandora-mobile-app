@@ -588,9 +588,9 @@ function program3(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"paginationInfo\">\n\n\n<div class=\"TitleTrans\">\n\n   <H3><b>Title:";
-  if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += "<div class=\"paginationInfo\">\n\n\n<div class=\"TitleTrans\">\n\n   <H3><b>Title: ";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
     + "</b></H3>\n\n</div>\n\n\n<div id=\"down-arrow\">\n    <a href=\"#Top\"><i class=\"fi-arrow-down icon-style\" ></i></a>\n    <h2><a id=\"Down\"></a></h2>\n</div>\n    \n\n\n<span class=\"secondary radius label\">Total ";
   if (stack1 = helpers.typ) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
