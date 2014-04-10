@@ -3,11 +3,12 @@ define([
 	'views/videoItem',
     'settings',
     'templates',
+     'views/videoTranscripts',
     "helpers/pagination"
 ],
 
 //Search Page with Pagination count number of pages,next page & prev page.
-function(Marionette, VideoItemView, settings, templates, pagination) {
+function(Marionette, VideoItemView, settings, templates,EmptyTranscriptView, pagination) {
 	var VideoSearchResults = Marionette.CompositeView.extend({
         initialize: function(options) {
             this.count = parseInt(options.count);
@@ -15,6 +16,7 @@ function(Marionette, VideoItemView, settings, templates, pagination) {
             this.queryString = options.queryString;
         },
 		itemView: VideoItemView,
+        emptyView: EmptyTranscriptView,
         template: templates[settings.templatesBase + "videoSearchResults.html"],
         appendHtml: function(collectionView, itemView) {
             collectionView.$('.videosList').append(itemView.el);

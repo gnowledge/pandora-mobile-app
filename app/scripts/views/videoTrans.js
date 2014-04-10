@@ -39,16 +39,13 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
         template: templates[settings.templatesBase + "videoTrans.html"],
         itemView: VideoTranscriptView,
         emptyView: EmptyTranscriptView,
-        //pagView:VideoTransView,
+        
         appendHtml: function(collectionView, itemView) {
             collectionView.$('.videosTranscript').append(itemView.el);    
         },
 
 
-        //appendHtml: function(collectionView,emptyView) {
-         //   collectionView.$('.emptyTranscript').append(emptyView.el);    
-       // },
-
+        
 
      
 
