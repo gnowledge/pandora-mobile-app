@@ -33,7 +33,7 @@ function ($, Backbone, App) {
                 prop: $(this).prop("href"),
                 attr: $(this).attr("href")
             },
-            root = location.protocol + "//" + location.host + app.root;
+            root = location.protocol + "//" + location.host + App.root;
 
         // Ensure the root is part of the anchor href, meaning it's relative.
         if (href.prop && href.prop.slice(0, root.length) === root) {

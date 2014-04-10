@@ -271,11 +271,15 @@ function program23(depth0,data) {
   buffer += "</br></br>\n\n		<b>Summary:</b>\n					";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.summary), {hash:{},inverse:self.program(23, program23, data),fn:self.program(21, program21, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</br></br>\n\n		<b>Link:</b> ";
+  buffer += "</br></br>\n\n		<b>Link:</b> <a target=\"_blank\" href=\"";
   if (stack1 = helpers.shareURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.shareURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\n	</div>				\n	</div>\n\n</div>\n\n</div>\n\n</div>";
+    + "\">";
+  if (stack1 = helpers.shareURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = (depth0 && depth0.shareURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</a>\n	</div>				\n	</div>\n\n</div>\n\n</div>\n\n</div>";
   return buffer;
   });
 
