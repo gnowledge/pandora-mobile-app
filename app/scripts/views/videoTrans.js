@@ -27,6 +27,12 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
             if (this.count < this.end) {
                 this.end = this.count;
             }
+            this.typ = options.typ;
+            if (options.typ == 'transcripts') {
+                this.otherTyp = 'descriptions';
+            } else {
+                this.otherTyp = 'transcripts';
+            }
             this.next = this.count > this.end ? this.page + 1 : false;
             this.prev = this.start > 0 ? (this.page - 1).toString() : false;
             //GLOB = this.collection;
@@ -70,7 +76,9 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
                 'prev': this.prev,
                 'start': this.start,
                 'end': this.end,
-                'id': this.id
+                'id': this.id,
+                'typ': this.typ,
+                'otherTyp': this.otherTyp
                 //'layers':this.layers
                 
             }    

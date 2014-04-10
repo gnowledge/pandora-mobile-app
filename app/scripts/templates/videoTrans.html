@@ -15,16 +15,16 @@
     
 
 
-<span class="secondary radius label">Total transcripts: ({{ count }})</span>
+<span class="secondary radius label">Total {{ typ }}: ({{ count }})</span>
 </br>
 
- <span class="secondary radius label">Displaying transcripts : {{ start }} - {{ end }}</span></br>
+ <span class="secondary radius label">Displaying {{ typ }}: {{ start }} - {{ end }}</span></br>
     {{#if prev }}
-        <a href="#video/{{ id  }}/layers/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
     {{/if }}
-    <span class="radius label">Page:{{ page }}</span>
+    <span class="radius label">Page: {{ page }}</span>
     {{#if next }}
-        <a href="#video/{{ id }}/layers/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#video/{{ id }}/layers/{{ typ }}/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}
 </div>
       
@@ -35,12 +35,25 @@
 	
 <div id="data">
     <div class="videosTranscript">
-        <center><a href="#video/{{ id }}/info" class="alert radius label">
-        <b>[ Video Info ]</b></a></center>
+        <center>
+            <a href="#video/{{ id }}/info" class="alert radius label">
+                <b>[ Video Info ]</b>
+            </a>
+            <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="alert radius label">
+                <b>[ Video {{ otherTyp }} ]</b>
+            </a>
+
+        </center>
         
     </div>
-        <center><a href="#video/{{ id }}/info" class="alert radius label">
-        <b>[ Video Info ]</b></a></center>
+        <center>
+            <a href="#video/{{ id }}/info" class="alert radius label">
+                <b>[ Video Info ]</b>
+            </a>
+            <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="alert radius label">
+                <b>[ Video {{ otherTyp }} ]</b>
+            </a>
+        </center>
 </div>
 
 
@@ -56,16 +69,16 @@
 
 
 
-<span class="secondary radius label">Total transcripts: ({{ count }})</span>
+<span class="secondary radius label">Total {{ typ }}: ({{ count }})</span>
 </br>
 
- <span class="secondary radius label">Displaying transcripts : {{ start }} - {{ end }}</span></br>
+ <span class="secondary radius label">Displaying {{ typ }}: {{ start }} - {{ end }}</span></br>
     {{#if prev }}
-        <a href="#video/{{ id  }}/layers/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
     {{/if }}
-    <span class="radius label">Page:{{ page }}</span>
+    <span class="radius label">Page: {{ page }}</span>
     {{#if next }}
-        <a href="#video/{{ id }}/layers/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#video/{{ id }}/layers/{{ typ }}/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}
 </div>
 

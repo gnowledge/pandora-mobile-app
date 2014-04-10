@@ -140,11 +140,11 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
         },
 
 //Function of list video Transcripts.
-        'videoLayers': function(id,page) {
-        if (!page) {
+        'videoLayers': function(id,typ,page) {
+            if (!page) {
                 page = 0;
             }
-
+            console.log("typ", typ);
             var startRange = page * settings.pageSize;
             var endRange = startRange + settings.pageSize;
             var range = [startRange, endRange];
@@ -159,23 +159,23 @@ function($, require, Backbone, HomeView, api, LoadingView, settings) {
             
             var $xhr = api.getVideoLayers(id, range, ['id', 'title']);
             $xhr.done(function(response) {
-                var layersData = response.data.layers.transcripts; 
-                console.log("layersData", layersData);   
+                var layersData = response.data.layers[typ]; 
+                //console.log("layersData", layersData);   
                 //var videosCount = response.data.items.length;
 
-                console.log(response);
+                //console.log(response);
                 require([
                     'collections/transcripts',
                     'views/videoTrans',
                 ], function(Transcripts, VideoTranscriptsView) {
                     //console.log("videos in this list", videosData);
-                    var transcripts = new Transcripts(layersData)
+                    var layers = new Transcripts(layersData)
                     //var videosCollection = new Videos(videosData);
                     var view = new VideoTranscriptsView({
-                        collection: transcripts,
-                        //count: videosCount,
+                        collection: layers,
+                        typ: typ,
                         page: page,
-                        id:id,
+                        id:id
                         //layers:layers
                     });
 

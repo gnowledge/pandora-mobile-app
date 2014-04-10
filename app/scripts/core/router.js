@@ -9,7 +9,7 @@ function(Marionette, Controller) {
         'signin': 'signin',  //User sign in page with email-id & password.
         'video/:id/videoplay/:timing': 'playVideo',  //Video Transcript page with in & out timing.
         'video/:id/videoplay': 'playVideo',   //Video Player Page.
-        'video/:id/layers': 'videoLayers',  //List of video Transcripts.
+        'video/:id/layers/:typ/:page': 'videoLayers',  //List of video Transcripts.
         'video/:id/layers/:page': 'videoLayers',
         'video/:id/info': 'videoInfo',  //video Info
         'list/:id': 'list',  //List of videos page.
