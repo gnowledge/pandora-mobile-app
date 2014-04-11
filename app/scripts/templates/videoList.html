@@ -2,9 +2,9 @@
 
 <div class="paginationInfo">
 
-<div class="Titlelist">
+<div class="Titlelist headings">
 
-   <H3><b>{{ title }}</b></H3>
+   <b>{{ title }}</b>
 
 </div>
 
@@ -14,16 +14,16 @@
     <h2><a id="Down"></a></h2>
 </div>
     
+<br/>
+<span class="content-headings"><b>( Total Videos : ({{ count }}) ||
 
-<span class="tiny secondary round label">Total Videos: ({{ count }}) ||
-
-Displaying Videos : {{ start }} - {{ end }}</span></br>
+Displaying Videos : {{ start }} - {{ end }} )</b></span></br></br>
     {{#if prev }}
-        <a href="#list/{{ id  }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
-    <span class="radius label">Page:{{ page }}</span>
+    <span class="sub-headings"><b>Page : </b>{{ page }}</span>
     {{#if next }}
-        <a href="#list/{{ id }}/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}
 </div>
 
@@ -47,15 +47,15 @@ Displaying Videos : {{ start }} - {{ end }}</span></br>
 
 <div class="paginationInfo">
 
-<span class="secondary radius label">Total Videos: ({{ count }}) ||
+<span class="content-headings"><b>( Total Videos : ({{ count }}) ||
 
-Displaying Videos : {{ start }} - {{ end }}</span></br>
+Displaying Videos : {{ start }} - {{ end }} )</b></span></br></br>
     {{#if prev }}
-        <a href="#list/{{ id  }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
-    <span class="radius label">Page:{{ page }}</span>
+    <span class="sub-headings"><b>Page : </b>{{ page }}</span>
     {{#if next }}
-        <a href="#list/{{ id }}/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}
 </div>
-
+</br>

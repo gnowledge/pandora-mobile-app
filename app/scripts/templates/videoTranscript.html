@@ -4,26 +4,26 @@
 	
 		<div class="large-2 small-4 columns" id="video-icons">
         	<center>
-        		<span class="secondary radius label"><b>Title:</b> {{ id }} <br /></span>
+        		<span class="sub-headings"><b>Title: {{ id }} </b></span></br></br>
 
 				<a href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}">	
 				<img src="{{ inIcon }}" alt="videoTranscript" />
 				</a></br></br>
-				<a class=" alert radius label" href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}">&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;</a>
-		</center>
+				<a href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}"><i class="fi-play-video icon-style"></i></a>
+			</center>
 		</div>
 		
 
 		<div class="large-10 small-8 columns">
 			<div id="data">
 				<div class="panel radius">
-				<b>User:</b> {{ user }} <br />
-				<b>Duration:</b> {{ duration }} <br />
-				<b>In:</b> {{ in }} <br />
-				<b>Out:</b> {{ out }} <br />
+				<span class="sub-title"><b>User :</b></span> {{ user }} <br />
+				<span class="sub-title"><b>Duration :</b></span> {{ duration }} <br />
+				<span class="sub-title"><b>In :</b></span> {{ in }} <br />
+				<span class="sub-title"><b>Out :</b></span> {{ out }} <br />
 				
 
-                   <b>Value:</b> 
+                <span class="sub-title">   <b>Value :</b></span> 
 				{{#if value }} 
 							{{{ value }}}
 					{{ else }} 
@@ -35,3 +35,4 @@
 		</div>
 </div>
 
+</br>

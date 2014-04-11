@@ -13,16 +13,24 @@
 
 		<div class="large-10 small-8 columns">
             
-			<h3><a href="#video/{{ id }}/videoplay" style="color: #000000"> {{ title }}</h3></a>
+			<h3><a href="#video/{{ id }}/videoplay" class="main-links"> <b>{{ title }}</b></h3></a>
 
 
 
-		    Name: <a href="#video/{{ id }}/videoplay" style="color:orange">{{ title }}</a></br></br>
+		    <span class="sub-headings"><b>Name : </b></span> <a href="#video/{{ id }}/videoplay" class="sub-links content-headings"><b>{{ title }}</b></a></br></br>
 
+		    <div class="large-4 small-4 columns">
+		    	<a href="#video/{{ id }}/info" ><span class="radius label" ><b>[ Video Info ]</b></span></a>
+		    </div>
 
-		    <a href="#video/{{ id }}/info" ><span class="alert radius label" ><b>[ Video Info ]</b></span></a>&nbsp;&nbsp;&nbsp;
-		    <a href="#video/{{ id }}/layers/transcripts"><span class="alert radius label"><b>[ Transcripts ]</b></span></a>&nbsp;&nbsp;&nbsp;
-		    <a href="#video/{{ id }}/layers/descriptions"><span class="alert radius label"><b>[ Descriptions ]</b></span></a>
+		    <div class="large-4 small-4 columns">
+		    	<a href="#video/{{ id }}/layers/transcripts"><span class="radius label"><b>[ Transcripts ]</b></span></a>
+			</div>
+
+			<div class="large-4 small-4 columns">
+		    	<a href="#video/{{ id }}/layers/descriptions"><span class="radius label"><b>[ Descriptions ]</b></span></a>
+		    </div>
+		    <br/>
 			<hr>
 			
 		</div>
@@ -30,3 +38,4 @@
 
 </div>
 
+</br>

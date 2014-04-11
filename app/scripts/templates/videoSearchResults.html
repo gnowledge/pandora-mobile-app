@@ -1,25 +1,25 @@
 <!-- template -Search Video page with Pagination -->  
 
 <div class="searchedFor">
-    <span class="secondary radius label">Results for "{{ queryString }}"</span>
+    <span class="content-headings"><b>Results for : "<span class="sub-title">{{ queryString }}</span>"</b></span>
     <div id="down-arrow">
         <a href="#Top"><i class="fi-arrow-down icon-style" ></i></a>
         <h2><a id="Down"></a></h2>
     </div>
 </div>
-
-
+</br>
 <div class="paginationInfo">
-    <span class="secondary radius label">Total results: {{ count }}
-    Displaying results {{ start }} - {{ end }} </span></br>
+    <span class="content-headings"><b>Total results: {{ count }} ||
+    Displaying results {{ start }} - {{ end }}</b> </span></br></br>
     {{#if prev }}
-        <a href="#search/{{ queryString }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
-    &nbsp;&nbsp;<span class="radius label">{{ page }}</span>&nbsp;&nbsp;
+    &nbsp;&nbsp;<span class="sub-headings"><b>Page : {{ page }}</b></span>&nbsp;&nbsp;
     {{#if next }}
-        <a href="#search/{{ queryString }}/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}</br>
 </div>
+
 <div id="data">
 <div class="videosList">
 
@@ -35,17 +35,19 @@
 
 
 <div class="searchedFor">
-    <span class="secondary radius label">Results for "{{ queryString }}"</span>
+    <span class="content-headings"><b>Results for : "<span class="sub-title">{{ queryString }}</span>"</b></span>
     
 </div>
+</br>
 <div class="paginationInfo">
-    <span class="secondary radius label">Total results: {{ count }}
-    Displaying results {{ start }} - {{ end }} </span></br>
+    <span class="content-headings"><b>Total results: {{ count }} ||
+    Displaying results {{ start }} - {{ end }}</b> </span></br></br>
     {{#if prev }}
         <a href="#search/{{ queryString }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
     {{/if }}
-    &nbsp;&nbsp;<span class="radius label">{{ page }}</span>&nbsp;&nbsp;
+    &nbsp;&nbsp;<span class="sub-headings"><b>Page : {{ page }}</b></span>&nbsp;&nbsp;
     {{#if next }}
         <a href="#search/{{ queryString }}/{{ next }}"><span class="alert radius label">Next</span></a>
     {{/if }}</br>
 </div>
+</br>

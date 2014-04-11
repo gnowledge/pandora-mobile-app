@@ -50,12 +50,6 @@
         box-shadow: 0px 0px 15px orange;
     }
 
-
-    img:hover{
-        border-color: #6EA2DE;
-        box-shadow: 10px 10px 10px orange;
-    }
-
     #video-icons{
         padding-top: 20px;
     }
@@ -76,4 +70,56 @@
         position:absolute;
         bottom:relative;
         right:5px;
+    }
+
+    .label{
+        background-color: rgb(240, 65, 36);
+    }
+
+    .main-links{
+        color: black;
+    }
+    .sub-links{
+        color:orange;
+    }
+
+
+    .headings {
+        color: gold;
+        text-shadow:    -1px 0 0 #000000, 
+                        1px 1px 0 #000000,
+                        2px -1px 0 #000000,
+                        3px 0 0 #000000;
+
+        font-size: 20px;
+    }
+
+    .sub-headings {
+        color: orange;
+        text-shadow:    -1px 0 0 #000000, 
+                        1px 1px 0 #000000,
+                        2px -1px 0 #000000,
+                        3px 0 0 #000000;
+
+        font-size: 15px;
+    }
+
+    .content-headings {
+        color: white;
+        text-shadow:    -1px 0 0 #000000, 
+                        1px 1px 0 #000000,
+                        2px -1px 0 #000000,
+                        3px 0 0 #000000;
+
+        font-size: 15px;
+    }
+
+        .sub-title {
+        color: gold;
+        text-shadow:    -1px 0 0 #000000, 
+                        1px 1px 0 #000000,
+                        2px -1px 0 #000000,
+                        3px 0 0 #000000;
+
+        font-size: 15px;
     }
