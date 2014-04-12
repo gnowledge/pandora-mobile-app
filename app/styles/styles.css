@@ -123,3 +123,12 @@
 
         font-size: 15px;
     }
+
+    .sub-nav dt a, .sub-nav dd a, .sub-nav li a,.side-nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.panel{
+    background-color: #F2F2F2;
+}

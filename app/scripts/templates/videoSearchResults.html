@@ -9,8 +9,7 @@
 </div>
 </br>
 <div class="paginationInfo">
-    <span class="content-headings"><b>Total results: {{ count }} ||
-    Displaying results {{ start }} - {{ end }}</b> </span></br></br>
+    <span class="sub-headings"><b><span class="content-headings">(Total results:</span>{{ count }} &nbsp;&nbsp;&nbsp;<span class="content-headings"> Displaying results: </span> {{ start }} - {{ end }})</b> </span></br></br>
     {{#if prev }}
         <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
@@ -40,14 +39,13 @@
 </div>
 </br>
 <div class="paginationInfo">
-    <span class="content-headings"><b>Total results: {{ count }} ||
-    Displaying results {{ start }} - {{ end }}</b> </span></br></br>
+    <span class="sub-headings"><b><span class="content-headings">(Total results:</span>{{ count }} &nbsp;&nbsp;&nbsp;<span class="content-headings"> Displaying results: </span> {{ start }} - {{ end }})</b> </span></br></br>
     {{#if prev }}
-        <a href="#search/{{ queryString }}/{{ prev }}"><span class="alert radius label">Prev</span></a>
+        <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
     &nbsp;&nbsp;<span class="sub-headings"><b>Page : {{ page }}</b></span>&nbsp;&nbsp;
     {{#if next }}
-        <a href="#search/{{ queryString }}/{{ next }}"><span class="alert radius label">Next</span></a>
+        <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}</br>
 </div>
 </br>
