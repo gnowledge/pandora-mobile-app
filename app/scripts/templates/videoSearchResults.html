@@ -1,15 +1,12 @@
 <!-- template -Search Video page with Pagination -->  
 
 <div class="searchedFor">
-    <span class="content-headings"><b>Results for : "<span class="sub-title">{{ queryString }}</span>"</b></span>
-    <div id="down-arrow">
-        <a href="#Top"><i class="fi-arrow-down icon-style" ></i></a>
-        <h2><a id="Down"></a></h2>
-    </div>
+    <span class="sub-headings"><b>Results for : </span> "<span class="sub-links">{{ queryString }}"</b></span>
+    
 </div>
 </br>
 <div class="paginationInfo">
-    <span class="sub-headings"><b><span class="content-headings">(Total results:</span>{{ count }} &nbsp;&nbsp;&nbsp;<span class="content-headings"> Displaying results: </span> {{ start }} - {{ end }})</b> </span></br></br>
+   <b>Total results:</span>{{ count }} &nbsp;&nbsp;&nbsp; Displaying results:  {{ start }} - {{ end }}</b> </br></br>
     {{#if prev }}
         <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
@@ -18,7 +15,7 @@
         <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}</br>
 </div>
-
+<hr />
 <div id="data">
 <div class="videosList">
 
@@ -26,20 +23,13 @@
 </div>
 
 
-<div id="top-arrow">
-    <h2><a id="Top"></a></h2>
-    <a href="#Down"><i class="fi-arrow-up icon-style"></i></a>
-</div>
-
-
-
 <div class="searchedFor">
-    <span class="content-headings"><b>Results for : "<span class="sub-title">{{ queryString }}</span>"</b></span>
+    <span class="sub-headings"><b>Results for : </span> "<span class="sub-links">{{ queryString }}"</b></span>
     
 </div>
 </br>
 <div class="paginationInfo">
-    <span class="sub-headings"><b><span class="content-headings">(Total results:</span>{{ count }} &nbsp;&nbsp;&nbsp;<span class="content-headings"> Displaying results: </span> {{ start }} - {{ end }})</b> </span></br></br>
+    <b>Total results:{{ count }} &nbsp;&nbsp;&nbsp; Displaying results:  {{ start }} - {{ end }}</b> </br></br>
     {{#if prev }}
         <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}

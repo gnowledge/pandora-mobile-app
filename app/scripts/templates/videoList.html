@@ -9,16 +9,13 @@
 </div>
 
 
-<div id="down-arrow">
-    <a href="#Top"><i class="fi-arrow-down icon-style" ></i></a>
-    <h2><a id="Down"></a></h2>
-</div>
+
     
 <br/>
 
-<span class="sub-headings"><b>( <span class="content-headings">Total Videos :</span> {{ count }}&nbsp;&nbsp;&nbsp;
+<b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
 
-<span class="content-headings">Displaying Videos :</span> {{ start }} - {{ end }} )</b></span></br></br>
+Displaying Videos : {{ start }} - {{ end }}</b></br></br>
     {{#if prev }}
         <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
@@ -27,7 +24,7 @@
         <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}
 </div>
-
+<br /><hr />
 
 	
 <div id="data">
@@ -39,17 +36,11 @@
 
 
 
-<div id="top-arrow">
-    <h2><a id="Top"></a></h2>
-    <a href="#Down"><i class="fi-arrow-up icon-style"></i></a>
-</div>
-
-
 
 <div class="paginationInfo">
-<span class="sub-headings"><b>( <span class="content-headings">Total Videos :</span> {{ count }}&nbsp;&nbsp;&nbsp;
+<b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
 
-<span class="content-headings">Displaying Videos :</span> {{ start }} - {{ end }} )</b></span></br></br>
+Displaying Videos : {{ start }} - {{ end }}</b></br></br>
     {{#if prev }}
         <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}

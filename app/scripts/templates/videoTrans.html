@@ -8,14 +8,9 @@
 </div>
 
 
-<div id="down-arrow">
-    <a href="#Top"><i class="fi-arrow-down icon-style" ></i></a>
-    <h2><a id="Down"></a></h2>
-</div>
-    
-</br>
 
-<span class="sub-headings"><b>( <span class="content-headings">Total {{ typ }}:</span> {{ count }} &nbsp;&nbsp;&nbsp; <span class="content-headings">Displaying {{ typ }}:</span> {{ start }} - {{ end }} )</b></span></br></br>
+</br>
+<b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></br></br>
     {{#if prev }}
         <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
@@ -24,7 +19,7 @@
         <a href="#video/{{ id }}/layers/{{ typ }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}
 </div>
-      
+<br />
 
        
 
@@ -34,18 +29,20 @@
     <div class="videosTranscript">
         <center>
             <a href="#video/{{ id }}/info" class="radius label">
-                <b><pre>[  Video Info  ]</pre></b>
+                <b>[ Video Info ]</b>
             </a>
             <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="radius label">
                 <b>[ Video {{ otherTyp }} ]</b>
             </a>
 
         </center>
-        
+        <br />    
     </div>
+
+
         <center>
             <a href="#video/{{ id }}/info" class="radius label">
-                <b><pre>[  Video Info  ]</pre></b>
+                <b>[ Video Info ]</b>
             </a>
             <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="radius label">
                 <b>[ Video {{ otherTyp }} ]</b>
@@ -55,19 +52,16 @@
 </div>
 
 
-<div id="top-arrow">
-    <h2><a id="Top"></a></h2>
-    <a href="#Down"><i class="fi-arrow-up icon-style"></i></a>
-</div>
 
 
+<br />
 <div class="paginationInfo">
 
 
 
 
 
-<span class="sub-headings"><b>( <span class="content-headings">Total {{ typ }}:</span> {{ count }} &nbsp;&nbsp;&nbsp; <span class="content-headings">Displaying {{ typ }}:</span> {{ start }} - {{ end }} )</b></span></br></br>
+<b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></br></br>
     {{#if prev }}
         <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}

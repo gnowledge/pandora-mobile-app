@@ -7,7 +7,7 @@ function() {
         pandoraInstance: 'https://pad.ma/',//Linking to pad.ma site.
         //pandoraInstance: 'http://wetube.gnowledge.org/',
         templatesBase: 'app/scripts/templates/',
-        pageSize: 15 //Pagination to show 50 pages.
+        pageSize: 10 //Pagination to show 10 pages.
     };
 
     return settings;

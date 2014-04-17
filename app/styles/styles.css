@@ -5,28 +5,13 @@
     header{
         display: block;
     }
-    h3{
-        font: 20px bold Tahoma;
-    }
-    
+
     #data{
-        margin: 20px auto;
+        /*margin: 20px auto;*/
         text-align: left;
     }
-    #signinDiv
-    {
-        border: 1px solid black;
-        width: 500px;
-        height: 250px;
-        margin: 20px auto;
-        padding: 20px;
-        text-align: center;
-    }
-    img{
-        border:1px solid #;
-        border-radius: 15px;
-        box-shadow: gray 8px 8px 8px;
-    }
+
+
     body{
 
         font: Tahoma;
@@ -34,101 +19,5 @@
 
     }
     
-    .icon-style{
-        color: rgb(240, 65, 36); 
-        font-size: 2em;
-    }
-
-    .top-bar input, .top-bar .button {
-        font-size: 0.875rem;
-        position: relative;
-        top: 4px;
-    }
-
-    #searchInput:focus{
-        border-color: #6EA2DE;
-        box-shadow: 0px 0px 15px orange;
-    }
-
-    #video-icons{
-        padding-top: 20px;
-    }
-    .label{
-        font-weight: bolder;
-    }
-    .title{
-        font-size: 20px;
-    }
-
-    #down-arrow{
-        position:absolute;
-        top:relative;
-        right:5px;
-    }
-
-    #top-arrow{
-        position:absolute;
-        bottom:relative;
-        right:5px;
-    }
-
-    .label{
-        background-color: rgb(240, 65, 36);
-    }
-
-    .main-links{
-        color: black;
-    }
-    .sub-links{
-        color:orange;
-    }
 
 
-    .headings {
-        color: gold;
-        text-shadow:    -1px 0 0 #000000, 
-                        1px 1px 0 #000000,
-                        2px -1px 0 #000000,
-                        3px 0 0 #000000;
-
-        font-size: 20px;
-    }
-
-    .sub-headings {
-        color: orange;
-        text-shadow:    -1px 0 0 #000000, 
-                        1px 1px 0 #000000,
-                        2px -1px 0 #000000,
-                        3px 0 0 #000000;
-
-        font-size: 15px;
-    }
-
-    .content-headings {
-        color: white;
-        text-shadow:    -1px 0 0 #000000, 
-                        1px 1px 0 #000000,
-                        2px -1px 0 #000000,
-                        3px 0 0 #000000;
-
-        font-size: 15px;
-    }
-
-        .sub-title {
-        color: gold;
-        text-shadow:    -1px 0 0 #000000, 
-                        1px 1px 0 #000000,
-                        2px -1px 0 #000000,
-                        3px 0 0 #000000;
-
-        font-size: 15px;
-    }
-
-    .sub-nav dt a, .sub-nav dd a, .sub-nav li a,.side-nav li a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.panel{
-    background-color: #F2F2F2;
-}
