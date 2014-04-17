@@ -325,7 +325,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/descriptions\"><span class=\"radius label\"><b>[ Descriptions ]</b></span></a>\n		</div>\n\n</div>\n\n</div>\n<hr />\n<br />\n\n";
+    + "/layers/descriptions\"><span class=\"radius label\"><b>[ Descriptions ]</b></span></a>\n		</div>\n\n\n		<a href=\"#\" data-dropdown=\"drop\" class=\"custom-dropdown-button\">Dropdown Button</a><br> <ul id=\"drop\" data-dropdown-content class=\"f-dropdown\"> <li><a href=\"#\">This is a link</a></li> <li><a href=\"#\">This is another</a></li> <li><a href=\"#\">Yet another</a></li> </ul>\n\n</div>\n\n</div>\n<hr />\n<br />\n\n";
   return buffer;
   });
 

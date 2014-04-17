@@ -52,7 +52,9 @@ function(Marionette, _, Transcripts, VideoTranscriptView, settings, templates,Em
         },
 
 
-        
+        onRender: function() {
+            this.$el.foundation();
+        },     
 
      
 
