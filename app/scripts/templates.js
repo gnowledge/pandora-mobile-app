@@ -89,15 +89,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/info\"><span class=\"radius label\"><b>[ Video Info ]</b></span></a>\n    </div>\n\n    <div class=\"large-4 small-4 columns\">\n		<a href=\"#video/";
+    + "/info\"><span class=\"radius label\"><b> Video Info </b></span></a>\n    </div>\n\n    <div class=\"large-4 small-4 columns\">\n		<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/transcripts\"><span class=\"radius label\"><b>[ Transcripts ]</b></span></a>\n	</div>\n\n	<div class=\"large-4 small-4 columns\">\n    	<a href=\"#video/";
+    + "/layers/transcripts\"><span class=\"radius label\"><b> Transcripts </b></span></a>\n	</div>\n\n	<div class=\"large-4 small-4 columns\">\n    	<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/descriptions\"><span class=\"radius label\"><b>[ Descriptions ]</b></span></a>\n    </div>\n\n\n</br></br>\n\n\n\n";
+    + "/layers/descriptions\"><span class=\"radius label\"><b> Descriptions </b></span></a>\n    </div>\n\n\n</br></br>\n\n\n\n";
   return buffer;
   });
 
@@ -230,19 +230,19 @@ function program23(depth0,data) {
   if (stack1 = helpers.iconURL) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.iconURL); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\" width=\"300px\"/>\n	</a></br></br>\n	<a href=\"#video/";
+    + "\" width=\"300px\"/>\n	</a><br /><br />\n\n	<div><a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/videoplay\"><b><i class=\"fi-play-video icon-style\"></i></b></a>\n\n\n	<ul class=\"side-nav\"> \n		<li class=\"label radius\">\n			<a href=\"#video/";
+    + "/videoplay\"><b><i class=\"fi-play-video icon-style\"></i></b></a></div>	\n\n	<div><a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/transcripts\"><pre>[Transcripts]</pre></a>\n		</li> \n		<li class=\"label radius\">\n			<a href=\"#video/";
+    + "/layers/transcripts\"><span class=\"radius label\"><b> Transcripts </b></span></a></div>\n	\n	<div><a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/descriptions\">[ Descriptions ]</a>\n		</li> \n\n	 </ul>\n</div>\n\n\n\n\n<!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  \n <div class=\"large-10 small-8 columns\">	\n	<div id= \"data\">\n		<div class=\"panel radius\">\n		<a href=\"#video/";
+    + "/layers/descriptions\"><span class=\"radius label\"><b> Descriptions </b></span></a></div>\n</div>\n\n\n\n\n<!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  \n <div class=\"large-10 small-8 columns\">	\n	<div id= \"data\">\n		<div class=\"panel radius\">\n		<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -305,27 +305,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b></h3></a>\n\n\n\n		    <!--<span class=\"sub-headings\"><b>Name : </b></span> <a href=\"#video/";
+    + "</b></h3></a>\n\n    			\n			\n		</div>\n\n    	<div class=\"videoButtons\">\n			<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/videoplay\" class=\"sub-links content-headings\"><b>";
-  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "</b></a></br></br>-->\n\n    			\n			\n		</div>\n\n    	<div class=\"videoButtons\">\n			<a href=\"#video/";
+    + "/info\"><span class=\"radius label\"><b> Video Info </b></span></a>\n			    \n	\n			<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/info\"><span class=\"radius label\"><b>[ Video Info ]</b></span></a>\n			    \n	\n			<a href=\"#video/";
+    + "/layers/transcripts\"><span class=\"radius label\"><b> Transcripts </b></span></a>\n	\n\n			<a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/layers/transcripts\"><span class=\"radius label\"><b>[ Transcripts ]</b></span></a>\n	\n\n			<a href=\"#video/";
-  if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "/layers/descriptions\"><span class=\"radius label\"><b>[ Descriptions ]</b></span></a>\n		</div>\n\n\n		<a href=\"#\" data-dropdown=\"drop\" class=\"custom-dropdown-button\">Dropdown Button</a><br> <ul id=\"drop\" data-dropdown-content class=\"f-dropdown\"> <li><a href=\"#\">This is a link</a></li> <li><a href=\"#\">This is another</a></li> <li><a href=\"#\">Yet another</a></li> </ul>\n\n</div>\n\n</div>\n<hr />\n<br />\n\n";
+    + "/layers/descriptions\"><span class=\"radius label\"><b> Descriptions </b></span></a>\n		</div>\n\n\n\n</div>\n\n</div>\n<hr />\n<br />\n\n";
   return buffer;
   });
 
@@ -368,7 +360,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b>\n\n</div>\n\n\n\n    \n<br/>\n\n<b>Total Videos : ";
+    + "</b>\n\n</div>\n\n\n\n    \n<br/>\n\n<span class=\"secondary label round\"><b>Total Videos : ";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.count); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -380,7 +372,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b></br></br>\n    ";
+    + "</b></span></br></br>\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    <span class=\"sub-headings\"><b>Page : </b>";
@@ -390,7 +382,7 @@ function program3(depth0,data) {
     + "</span>\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.next), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>\n<br /><hr />\n\n	\n<div id=\"data\">\n    <div class=\"videosList\">\n\n    </div>\n    \n</div>\n\n\n\n\n<div class=\"paginationInfo\">\n<b>Total Videos : ";
+  buffer += "\n</div>\n<br /><hr />\n\n	\n<div id=\"data\">\n    <div class=\"videosList\">\n\n    </div>\n    \n</div>\n\n\n\n\n<div class=\"paginationInfo\">\n<span class=\"secondary label round\"><b>Total Videos : ";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.count); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -402,7 +394,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b></br></br>\n    ";
+    + "</b></span></br></br>\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    <span class=\"sub-headings\"><b>Page : </b>";
@@ -489,11 +481,11 @@ function program3(depth0,data) {
   return buffer;
   }
 
-  buffer += "<!-- template -Search Video page with Pagination -->  \n\n<div class=\"searchedFor\">\n    <span class=\"sub-headings\"><b>Results for : </span> \"<span class=\"sub-links\">";
+  buffer += "<!-- template -Search Video page with Pagination -->  \n\n<div class=\"searchedFor\">\n    <span class=\"headings\"><b>Results for : </span> \"<span class=\"sub-links\">";
   if (stack1 = helpers.queryString) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.queryString); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\"</b></span>\n    \n</div>\n</br>\n<div class=\"paginationInfo\">\n   <b>Total results:</span>";
+    + "\"</b></span>\n    \n</div>\n</br>\n<div class=\"paginationInfo\">\n   <span class=\"secondary label round\"><b>Total results:";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.count); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -505,7 +497,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b> </br></br>\n    ";
+    + "</b></span> <br /><br />\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    &nbsp;&nbsp;<span class=\"sub-headings\"><b>Page : ";
@@ -515,11 +507,11 @@ function program3(depth0,data) {
     + "</b></span>&nbsp;&nbsp;\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.next), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</br>\n</div>\n<hr />\n<div id=\"data\">\n<div class=\"videosList\">\n\n</div>\n</div>\n\n\n<div class=\"searchedFor\">\n    <span class=\"sub-headings\"><b>Results for : </span> \"<span class=\"sub-links\">";
+  buffer += "<br />\n</div>\n<hr />\n<div id=\"data\">\n<div class=\"videosList\">\n\n</div>\n</div>\n\n\n<div class=\"searchedFor\">\n    <span class=\"sub-headings\"><b>Results for : </span> \"<span class=\"sub-links\">";
   if (stack1 = helpers.queryString) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.queryString); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\"</b></span>\n    \n</div>\n</br>\n<div class=\"paginationInfo\">\n    <b>Total results:";
+    + "\"</b></span>\n    \n</div>\n</br>\n<div class=\"paginationInfo\">\n    <span class=\"secondary label round\"><b>Total results:";
   if (stack1 = helpers.count) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.count); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -531,7 +523,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b> </br></br>\n    ";
+    + "</b></span> <br /><br />\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    &nbsp;&nbsp;<span class=\"sub-headings\"><b>Page : ";
@@ -541,7 +533,7 @@ function program3(depth0,data) {
     + "</b></span>&nbsp;&nbsp;\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.next), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</br>\n</div>\n</br>";
+  buffer += "<br />\n</div>\n</br>";
   return buffer;
   });
 
@@ -592,7 +584,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.title); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b>\n\n</div>\n\n\n\n</br>\n<b>Total ";
+    + "</b>\n\n</div>\n\n\n\n</br>\n<span class=\"secondary label round\"><b>Total ";
   if (stack1 = helpers.typ) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.typ); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -612,7 +604,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b></br></br>\n    ";
+    + "</b></span><br /><br />\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    <span class=\"sub-headings\"><b>Page : ";
@@ -626,7 +618,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/info\" class=\"radius label\">\n                <b>[ Video Info ]</b>\n            </a>\n            <a href=\"#video/";
+    + "/info\"><span class=\"radius label\">\n                <b> Video Info </b></span>\n            </a>\n            <a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -634,15 +626,15 @@ function program3(depth0,data) {
   if (stack1 = helpers.otherTyp) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.otherTyp); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\" class=\"radius label\">\n                <b>[ Video ";
+    + "\"><span class=\"radius label\">\n                <b> Video ";
   if (stack1 = helpers.otherTyp) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.otherTyp); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + " ]</b>\n            </a>\n\n        </center>\n        <br />    \n    </div>\n\n\n        <center>\n            <a href=\"#video/";
+    + " </b></span>\n            </a>\n\n        </center>\n        <br />    \n    </div>\n\n        <center>\n            <a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "/info\" class=\"radius label\">\n                <b>[ Video Info ]</b>\n            </a>\n            <a href=\"#video/";
+    + "/info\"><span class=\"radius label\">\n                <b> Video Info </b></span>\n            </a>\n            <a href=\"#video/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.id); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -650,11 +642,11 @@ function program3(depth0,data) {
   if (stack1 = helpers.otherTyp) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.otherTyp); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\" class=\"radius label\">\n                <b>[ Video ";
+    + "\"><span class=\"radius label\">\n                <b> Video ";
   if (stack1 = helpers.otherTyp) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.otherTyp); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + " ]</b>\n            </a>\n\n        </center>\n</div>\n\n\n\n\n<br />\n<div class=\"paginationInfo\">\n\n\n\n\n\n<b>Total ";
+    + " </b></span>\n            </a>\n\n        </center>\n\n        </center>\n</div>\n\n\n\n\n<br />\n<div class=\"paginationInfo\">\n\n\n\n\n\n<span class=\"secondary label round\"><b>Total ";
   if (stack1 = helpers.typ) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.typ); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
@@ -674,7 +666,7 @@ function program3(depth0,data) {
   if (stack1 = helpers.end) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = (depth0 && depth0.end); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</b></br></br>\n    ";
+    + "</b></span><br /><br />\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.prev), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    <span class=\"sub-headings\"><b>Page : ";

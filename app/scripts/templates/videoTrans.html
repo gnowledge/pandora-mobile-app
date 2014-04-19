@@ -10,7 +10,7 @@
 
 
 </br>
-<b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></br></br>
+<span class="secondary label round"><b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></span><br /><br />
     {{#if prev }}
         <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}
@@ -28,25 +28,26 @@
 <div id="data">
     <div class="videosTranscript">
         <center>
-            <a href="#video/{{ id }}/info" class="radius label">
-                <b>[ Video Info ]</b>
+            <a href="#video/{{ id }}/info"><span class="radius label">
+                <b> Video Info </b></span>
             </a>
-            <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="radius label">
-                <b>[ Video {{ otherTyp }} ]</b>
+            <a href="#video/{{ id }}/layers/{{ otherTyp }}"><span class="radius label">
+                <b> Video {{ otherTyp }} </b></span>
             </a>
 
         </center>
         <br />    
     </div>
 
-
         <center>
-            <a href="#video/{{ id }}/info" class="radius label">
-                <b>[ Video Info ]</b>
+            <a href="#video/{{ id }}/info"><span class="radius label">
+                <b> Video Info </b></span>
             </a>
-            <a href="#video/{{ id }}/layers/{{ otherTyp }}" class="radius label">
-                <b>[ Video {{ otherTyp }} ]</b>
+            <a href="#video/{{ id }}/layers/{{ otherTyp }}"><span class="radius label">
+                <b> Video {{ otherTyp }} </b></span>
             </a>
+
+        </center>
 
         </center>
 </div>
@@ -61,7 +62,7 @@
 
 
 
-<b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></br></br>
+<span class="secondary label round"><b>Total {{ typ }}: {{ count }} &nbsp;&nbsp;&nbsp; Displaying {{ typ }}: {{ start }} - {{ end }}</b></span><br /><br />
     {{#if prev }}
         <a href="#video/{{ id  }}/layers/{{ typ }}/{{ prev }}"><span class="radius label">Prev</span></a>
     {{/if }}

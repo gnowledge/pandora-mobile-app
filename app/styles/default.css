@@ -32,6 +32,7 @@
     }
     .label{
         font-weight: bolder;
+        margin-bottom: 3px;
     }
     .title{
         font-size: 20px;
@@ -59,11 +60,6 @@
 
         font-size: 15px;
     }
-
-    .side-nav li a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
 
 	.paginationInfo {
 		color: #666;
@@ -93,3 +89,4 @@
 .panel{
     background-color: #F2F2F2;
 }
+
