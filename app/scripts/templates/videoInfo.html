@@ -8,11 +8,11 @@
 	<img src="{{ iconURL }}" width="300px"/>
 	</a><br /><br />
 
-	<div><a href="#video/{{ id }}/videoplay"><b><i class="fi-play-video icon-style"></i></b></a></div>	
+	<div><a href="#video/{{ id }}/videoplay"><i class="fi-play-video icon-style"></i></a></div>	
 
-	<div><a href="#video/{{ id }}/layers/transcripts"><span class="radius label"><b> Transcripts </b></span></a></div>
+	<div><a href="#video/{{ id }}/layers/transcripts"><span class="radius label"> Transcripts </span></a></div>
 	
-	<div><a href="#video/{{ id }}/layers/descriptions"><span class="radius label"><b> Descriptions </b></span></a></div>
+	<div><a href="#video/{{ id }}/layers/descriptions"><span class="radius label"> Descriptions </span></a></div>
 </div>
 
 
@@ -23,60 +23,60 @@
 	<div id= "data">
 		<div class="panel radius">
 		<a href="#video/{{ id }}/videoplay" class="main-links">
-		<span class="sub-headings"><b>Title : </b></span>{{ title }}</a></br></br>
+		<span class="sub-headings">Title : </span>{{ title }}</a></br></br>
           
 
 
-		<span class="sub-headings"><b>Project :</b></span> 
+		<span class="sub-headings">Project :</span> 
 				{{#if project }} 
 					{{ project }}
 										{{ else }} 
 							Not available  
 				{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Topic :</b></span> 
+		<span class="sub-headings">Topic :</span> 
 					{{#if topic }} 
 							{{ topic }}	
 						{{ else }} 
 							Not available  
 					{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Location :</b></span> 
+		<span class="sub-headings">Location :</span> 
 					{{#if location }} 
 					{{ location }}		
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Date :</b></span> 
+		<span class="sub-headings">Date :</span> 
 					{{#if date }}                           
 						{{ date }}	
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Language :</b></span> 
+		<span class="sub-headings">Language :</span> 
 					{{#if language }} 
 						{{ language }}		
 						{{ else }} 
 								Not available  
 					{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Director :</b></span>
+		<span class="sub-headings">Director :</span>
 						{{#if director }} 
 						{{ director }}		
 								{{ else }} 
 									Not available  
 						{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Summary :</b></span>
+		<span class="sub-headings">Summary :</span>
 					{{#if summary }} 
 							{{{ summary }}}
 							{{ else }}
 								Not available  
 					{{/if}}</br></br>
 
-		<span class="sub-headings"><b>Link :</b> </span><a target="_blank" href="{{ shareURL }}">{{ shareURL }}</a>
+		<span class="sub-headings">Link : </span><a target="_blank" href="{{ shareURL }}">{{ shareURL }}</a>
 	</div>				
 	</div>
 

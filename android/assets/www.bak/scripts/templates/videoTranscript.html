@@ -1,0 +1,32 @@
+<!-- template  for transcript page  -->  
+
+<div class="row">
+	
+		<div class="large-2 small-4 columns" id="video-icons">
+        	<center>
+        		<!-- <span class="sub-headings"><b>Title: {{ id }} </b></span></br></br> -->
+
+				<a href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}">	
+				<img src="{{ inIcon }}" alt="videoTranscript" />
+				</a> </br>
+				<a href="#video/{{ videoId }}/videoplay/{{ in }}-{{ out }}"><i class="fi-play-video icon-style"></i></a> 
+			</center>
+		</div>
+		
+
+		<div class="large-10 small-8 columns">
+			<div id="data">
+				<div class="panel radius">
+					<div class="transValue">{{{ value }}}</div>
+					<div class="transMeta">
+						In: {{ in_npt }} <br />
+						Out: {{ out_npt }} <br />
+						Duration: {{ duration_fixed }}s <br />
+						Contributed by: {{ user }}	
+					</div>	
+				</div>
+			</div>
+		</div>
+</div>
+
+</br>

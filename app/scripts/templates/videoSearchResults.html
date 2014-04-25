@@ -1,11 +1,12 @@
 <!-- template -Search Video page with Pagination -->  
 
 <div class="searchedFor">
-    <span class="headings"><b>Results for : </span> "<span class="sub-links">{{ queryString }}"</b></span>
+    <span class="headings">Results for : </span> "<span class="sub-links">{{ queryString }}</span>"
     
 </div>
 </br>
-<div class="paginationInfo">
+
+<!-- <div class="paginationInfo">
    <span class="secondary label round"><b>Total results:{{ count }} &nbsp;&nbsp;&nbsp; Displaying results:  {{ start }} - {{ end }}</b></span> <br /><br />
     {{#if prev }}
         <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
@@ -14,8 +15,10 @@
     {{#if next }}
         <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}<br />
-</div>
+ --></div>
+
 <hr />
+
 <div id="data">
 <div class="videosList">
 
@@ -23,7 +26,7 @@
 </div>
 
 
-<div class="searchedFor">
+<!-- <div class="searchedFor">
     <span class="sub-headings"><b>Results for : </span> "<span class="sub-links">{{ queryString }}"</b></span>
     
 </div>
@@ -37,5 +40,25 @@
     {{#if next }}
         <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
     {{/if }}<br />
-</div>
+</div> -->
 </br>
+
+<nav id = "footer">
+    <ul>
+        <li>{{#if prev }}
+            <a href="#search/{{ queryString }}/{{ prev }}"><span class="radius label">Prev</span></a>
+            {{/if }}
+        </li>
+
+        <li><span class="round label">Page : {{ page }}</span></li>
+        
+        <li>{{#if next }}
+            <a href="#search/{{ queryString }}/{{ next }}"><span class="radius label">Next</span></a>
+            {{/if }}
+        </li>
+    </ul>
+
+    <ul>
+        <li><span class="secondary label round">Total results:{{ count }} &nbsp;&nbsp;&nbsp; Displaying results:  {{ start }} - {{ end }}</span> </li>
+    </ul>
+</nav>

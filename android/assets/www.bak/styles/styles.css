@@ -1,0 +1,23 @@
+    *{
+        margin: 0px;
+        padding: 0px;   
+    }
+    header{
+        display: block;
+    }
+
+    #data{
+        /*margin: 20px auto;*/
+        text-align: left;
+    }
+
+
+    body{
+
+        font: Tahoma;
+        text-align: center;
+
+    }
+    
+
+

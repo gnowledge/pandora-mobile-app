@@ -4,7 +4,7 @@
 
 <div class="Titlelist headings">
 
-   <b>{{ title }}</b>
+   {{ title }}
 
 </div>
 
@@ -13,17 +13,10 @@
     
 <br/>
 
-<span class="secondary label round"><b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
+<!-- <span class="secondary label round"><b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
 
 Displaying Videos : {{ start }} - {{ end }}</b></span></br></br>
-    {{#if prev }}
-        <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
-    {{/if }}
-    <span class="sub-headings"><b>Page : </b>{{ page }}</span>
-    {{#if next }}
-        <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
-    {{/if }}
-</div>
+ --></div>
 <br /><hr />
 
 	
@@ -38,16 +31,31 @@ Displaying Videos : {{ start }} - {{ end }}</b></span></br></br>
 
 
 <div class="paginationInfo">
-<span class="secondary label round"><b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
+<!-- <span class="secondary label round"><b>Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
 
 Displaying Videos : {{ start }} - {{ end }}</b></span></br></br>
-    {{#if prev }}
-        <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
-    {{/if }}
-    <span class="sub-headings"><b>Page : </b>{{ page }}</span>
-    {{#if next }}
-        <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
-    {{/if }}
-
+ -->
 </div>
 </br>
+
+<nav id="footer">
+    <ul>
+
+    <li>{{#if prev }}
+            <a href="#list/{{ id  }}/{{ prev }}"><span class="radius label">Prev</span></a>
+        {{/if }}
+    </li>
+
+    <li>
+        <span class="label round">Page : {{ page }}</span>
+    </li>
+
+    <li>{{#if next }}
+        <a href="#list/{{ id }}/{{ next }}"><span class="radius label">Next</span></a>
+        {{/if }}
+    </li>
+    </ul>
+    <ul><li><span class="secondary label round">Total Videos : {{ count }}&nbsp;&nbsp;&nbsp;
+
+Displaying Videos : {{ start }} - {{ end }}</span></li></ul>
+</nav>
