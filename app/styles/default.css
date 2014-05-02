@@ -1,5 +1,5 @@
 	body {
-		background-color: grey;
+		background-color: #ffffcc;
 	}
 
     h3{
@@ -13,7 +13,7 @@
     }
 
     .icon-style{
-        color: rgb(240, 65, 36); 
+        color: rgb(163, 102, 90); 
         font-size: 2em;
     }
 
@@ -32,7 +32,6 @@
     }
     .label{
         font-weight: bolder;
-        margin-bottom: 3px;
     }
     .title{
         font-size: 20px;
@@ -61,6 +60,11 @@
         font-size: 15px;
     }
 
+    .side-nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 	.paginationInfo {
 		color: #666;
 	}
@@ -86,60 +90,6 @@
 	.videoButtons {
 		text-align: center;
 	}
-    
-    .panel{
-        background-color: #F2F2F2;
-    }
-
-
-    #exitButton{
-        float: right;
-        width: auto;
-        padding: 0px;
-        overflow: hidden;
-    }
-
-    #homeButton , #backButton{
-        float: left;
-        width: auto;
-        padding: 0px;
-        overflow: hidden;
-    }
-
-    #searchInput{
-        border-radius: 7px 0 0 7px;
-    }
-
-    #searchButton{
-        border-radius: 0 7px 7px 0;
-    }
-
-
-/*Footer*/
-    #footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        left: 0;
-        right: 0;
-        height: 60px;
-        border: black;
-        background: none repeat scroll 0 0 #222222;
-        color: white;
-    }
-    ul
-    {
-        list-style-type:none;
-        margin:0;
-        padding:0;
-    }
-    li
-    {
-        display:inline;
-    }
-
-    a:hover{
-       color: #333;
-    }
+.panel{
+    background-color: #F2F2F2;
+}

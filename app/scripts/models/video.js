@@ -18,7 +18,7 @@ function(Backbone, settings) {
 		},
 		getVideoURL: function(size) {
 		
-		return settings.pandoraInstance + this.id + "/" + size + "p.mp4";/*Function to get
+			return settings.pandoraInstance + this.id + "/" + size + "p.mp4";/*Function to get
 		                                                              video player format.*/    
 		},																	
 

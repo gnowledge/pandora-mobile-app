@@ -14,18 +14,29 @@
 
    <div class="mydiv">
       <div class="flex-video widescreen vimeo" > 
-        <video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
+        <video src="{{ videoURL96 }}" class="pandoraVideo" poster="{{ iconURL }}" controls></video>
 	<!-- <iframe src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 
 
 	</iframe> --> 
-   </div></div>
-
+   </div>
+   <select class="selectVideoResolution">
+     <option value="{{ videoURL96 }}">Low Resolution</option>
+     <option value="{{ videoURL240 }}">Medium Resolution</option>    
+   </select>
+  </div>
+<div align="left">
+  <form class="selectVideoResolution">
+<input type="radio" name="LR" value="{{ videoURL96 }}" >Low Resolution<br>
+<input type="radio" name="LR" value="{{ videoURL240 }}">Medium Resolution<br>
+</form> 
+</div>
    
 
 
 </div>
 <br>
+
 	<div class="large-4 small-4 columns">
     	<a href="#video/{{ id }}/info"><span class="radius label"> Video Info </span></a>
     </div>
