@@ -11,11 +11,12 @@ function(Backbone, Marionette, settings, templates) {
         template: templates[settings.templatesBase + "playVideo.html"],
         events: {
         	//'click #makeVideoBig': 'makeVideoBig',
-            'change .selectVideoResolution': 'selectVideoResolution'
+            'change .selectResolutionRadio': 'selectVideoResolution'
         },
         ui: {
         	'pandoraVideo': '.pandoraVideo',
-            'selectVideoResolution': '.selectVideoResolution'
+            'selectVideoResolution': '.selectVideoResolution',
+            'selectResolutionRadio': '.selectResolutionRadio'
         },
         initialize: function(params) {
             this.timing = params.timing;
@@ -42,10 +43,14 @@ function(Backbone, Marionette, settings, templates) {
                 });
             }
         },
-        'selectVideoResolution': function() {
+        'selectVideoResolution': function(e) {
             var $video = this.ui.pandoraVideo;
             var videoPlayer = this.ui.pandoraVideo.get(0);
-            var videoURL = this.ui.selectVideoResolution.val();
+            var $radio = $(e.target);
+            if (!$radio.is(":checked")) {
+                return;
+            }
+            var videoURL = $radio.val();
             console.log("setting url to " + videoURL);
             var currentTime = videoPlayer.currentTime;
             videoPlayer.setAttribute("src", videoURL);

@@ -39,6 +39,9 @@ function ($, Backbone, App) {
         if (href.prop && href.prop.slice(0, root.length) === root) {
             e.preventDefault();
             Backbone.history.navigate(href.attr, true);
+        } else {
+            e.preventDefault();
+            window.open(href.prop, '_system');
         }
     });
 
