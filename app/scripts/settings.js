@@ -4,8 +4,8 @@ define([
 
 function() {
     var settings = {
-        //pandoraInstance: 'https://pad.ma/',//Linking to pad.ma site.
-        pandoraInstance: 'https://indiancine.ma/',
+        pandoraInstance: 'https://pad.ma/',//Linking to pad.ma site.
+        //: 'https://indiancine.ma/',
         templatesBase: 'app/scripts/templates/',
         videoFormat: 'mp4',
         videoSizes: [96, 240],
