@@ -1,8 +1,64 @@
+<!-- template - Play video page -->  
+
+
+<div id="videopage">
 <header>
-	<h3>Play Video Page </h3>
+	<h5><span title="Video Title-[{{ title }}]" class="headings"> {{ title }}</span></h5>
 </header>
 
 
-<video src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls></video>
-</br>
-<button id="makeVideoBig">Make video big</button>
+
+
+   
+
+
+   <div class="mydiv">
+      <div class="flex-video widescreen vimeo" >
+      {{#if duration }} 
+        <video src="{{ videoURL96 }}" class="pandoraVideo" poster="{{ iconURL }}" controls></video>
+      {{ else }}
+        <div>No Video for this item</div>
+      {{/if }}
+
+	<!-- <iframe src="{{ videoURL96 }}" id="pandoraVideo" poster="{{ iconURL }}" controls width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+
+
+	</iframe> --> 
+      </div>
+   <!--
+   <select class="selectVideoResolution">
+     <option value="{{ videoURL96 }}">Low Resolution</option>
+     <option value="{{ videoURL240 }}">Medium Resolution</option>    
+   </select>
+  -->
+  </div>
+
+<div align="left">
+  <form class="selectVideoResolution">
+<input type="radio" name="LR" checked="checked" class="selectResolutionRadio" value="{{ videoURL96 }}" >Low Resolution<br>
+<input type="radio" name="LR" class="selectResolutionRadio" value="{{ videoURL240 }}">Medium Resolution<br>
+</form> 
+</div>
+   
+
+
+</div>
+<br>
+
+	<div class="large-4 small-4 columns">
+    	<a href="#video/{{ id }}/info"><span class="radius label"> Video Info </span></a>
+    </div>
+
+    <div class="large-4 small-4 columns">
+		<a href="#video/{{ id }}/layers/transcripts"><span class="radius label"> Transcripts </span></a>
+	</div>
+
+	<div class="large-4 small-4 columns">
+    	<a href="#video/{{ id }}/layers/descriptions"><span class="radius label"> Descriptions </span></a>
+    </div>
+
+
+</br></br>
+
+
+

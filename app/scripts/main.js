@@ -9,9 +9,17 @@ function ($, Backbone, App) {
 
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
-    $(document).ready(function() {
-        App.start();
-    });
+    var platform = window.globalConfig.platform;
+    if (platform === 'web') {
+        $(document).ready(function() {
+            App.start();
+        });        
+    } else {
+        document.addEventListener("deviceready", function() {
+            App.start();
+        }, true);
+    }
+
 
     // Trigger the initial route and enable HTML5 History API support
     //Backbone.history.start({ pushState: true, root: App.root });
@@ -25,12 +33,15 @@ function ($, Backbone, App) {
                 prop: $(this).prop("href"),
                 attr: $(this).attr("href")
             },
-            root = location.protocol + "//" + location.host + app.root;
+            root = location.protocol + "//" + location.host + App.root;
 
         // Ensure the root is part of the anchor href, meaning it's relative.
         if (href.prop && href.prop.slice(0, root.length) === root) {
             e.preventDefault();
             Backbone.history.navigate(href.attr, true);
+        } else {
+            e.preventDefault();
+            window.open(href.prop, '_system');
         }
     });
 

@@ -1,0 +1,13 @@
+To setup:
+  Make sure you have NodeJS v0.10 or greater.
+
+  Then:
+    npm install
+    npm install -g grunt-cli
+    bower install
+    grunt handlebars
+
+  Run server with:
+    grunt server
+
+  Open browser to http://localhost:8888

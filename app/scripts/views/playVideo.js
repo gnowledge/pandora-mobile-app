@@ -5,18 +5,71 @@ define([
     "templates"
 ],
 
+//Play video transcripts with in & out timing.
 function(Backbone, Marionette, settings, templates) {
     var PlayVideoView = Marionette.ItemView.extend({
         template: templates[settings.templatesBase + "playVideo.html"],
         events: {
-        	'click #makeVideoBig': 'makeVideoBig'
+        	//'click #makeVideoBig': 'makeVideoBig',
+            'change .selectResolutionRadio': 'selectVideoResolution'
         },
         ui: {
-        	'pandoraVideo': '#pandoraVideo'
+        	'pandoraVideo': '.pandoraVideo',
+            'selectVideoResolution': '.selectVideoResolution',
+            'selectResolutionRadio': '.selectResolutionRadio'
         },
-        makeVideoBig: function(e) {
-        	var bigVideoURL = this.model.get("videoURL240");
-        	this.ui.pandoraVideo.attr("src", bigVideoURL);
+        initialize: function(params) {
+            this.timing = params.timing;
+            return true;
+        },
+        templateHelpers: function() {
+            if (this.timing) {
+                return {
+                    'inPoint': this.timing.split("-")[0],
+                    'outPoint': this.timing.split("-")[1]
+                }
+            } else {
+                return {}
+            }
+        },
+        onRender: function() {
+            if (this.timing) {
+                var inSeconds = this.timing.split("-")[0];
+                var videoPlayer = this.ui.pandoraVideo.get(0);
+                this.ui.pandoraVideo.on("load", function() {
+                    videoPlayer.currentTime = inSeconds;
+                    videoPlayer.play();
+                    $(this).off("load");
+                });
+            }
+        },
+        'selectVideoResolution': function(e) {
+            var $video = this.ui.pandoraVideo;
+            var videoPlayer = this.ui.pandoraVideo.get(0);
+            var $radio = $(e.target);
+            if (!$radio.is(":checked")) {
+                return;
+            }
+            var videoURL = $radio.val();
+            console.log("setting url to " + videoURL);
+            var currentTime = videoPlayer.currentTime;
+            videoPlayer.setAttribute("src", videoURL);
+            videoPlayer.load();
+            //videoPlayer.play();
+            $video.on("loadstart", function() {
+                videoPlayer.play();
+                $video.off("loadstart");
+                $video.on("loadedmetadata", function() {
+                    console.log("loaded meta data");
+                    videoPlayer.currentTime = currentTime;
+                    $video.off("loadedmetadata");
+                });
+            });
+            //videoPlayer.currentTime = currentTime;
+            //videoPlayer.load();
+
+
+
         }
     });
 

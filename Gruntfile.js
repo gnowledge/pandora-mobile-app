@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             options: {
                 port: 8888,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -117,7 +117,8 @@ module.exports = function (grunt) {
                     optimize: 'none',
                     preserveLicenseComments: false,
                     useStrict: true,
-                    wrap: true
+                    wrap: true,
+                    dir: 'build'
                 }
             }
         },

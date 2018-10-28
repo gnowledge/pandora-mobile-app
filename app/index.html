@@ -1,44 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Mobile app for pan.do/ra</title>
 
     <!-- Point to the compiled stylesheet -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-	 <link rel="stylesheet" type="text/css" href="css/foundation.css">
+	  <!--<link rel="stylesheet" type="text/css" href="css/foundation.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/default.css">
 
-     <link rel="stylesheet" type="text/css" href="videoInfo.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+     <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+     <script src="cordova.js"></script>
 
-     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+     <script>
+        window.globalConfig = {};
+        window.globalConfig.platform = "web";
+     </script>
+
+     <script src="js/modernizr.js"></script>
+    
     <!-- Point to the require script -->
     <script data-main="scripts/config" src="bower_components/requirejs/require.js"></script>
     
 </head>
 <body>
-	<nav class="top-bar" data-topbar> 
+  <div class="fixed" id="navbar">
+	<nav class="top-bar" id="siteHeader" data-topbar> 
         <ul class="title-area"> 
-            <li class="name"> <h1><a href="#">My Site</a></h1> </li>
-             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-              </ul>
-               <section class="top-bar-section">
-               <!-- Right Nav Section --> 
-               <ul class="right"> 
-                <li class="active"><a href="#signin">Sign In</a>
-                </li> 
-                <li class="has-dropdown"> <a href="#">Right Button with Dropdown</a>
-                 <ul class="dropdown"> <li><a href="#">First link in dropdown</a></li>
-                  </ul>
-                   </li>
-                    </ul> <!-- Left Nav Section --> <ul class="left"> <li><a href="#">Left Nav Button</a></li> 
-                </ul>
+            <div class="large-2 small-2 columns">
+              <li class="name"> <h1><b><a href="#"><i class="step fi-home icon-style" id="homeButton"></i></a></b></h1></li>
+            </div>
+            <div class="large-6 small-6 columns">
+              <form id="searchForm">
+                <li class="has-form">
+                  <div class="row collapse"> 
+                    <div class="small-9 columns">
+                      <input type="text" id="searchInput" placeholder="Search"> 
+                    </div> 
+                    <div class="small-3 columns"> 
+                      <button id="searchButton" class="fi-magnifying-glass alert button postfix" ></button> 
+                    </div> 
+                  </div>
+                </li>
+              </form>
+            </div><!--template- Top bar with home page,input text & search button-->
+
+            <div class="large-2 small-2 columns">
+              <li class="has-form">
+                  <a onclick="history.go(-1)"><i class="step fi-arrow-left icon-style" id="backButton"></i></a> 
+              </li>
+            </div>
+
+            <div class="large-2 small-2 columns">
+              <li class="has-form">
+                  <i class="step fi-power icon-style" id="exitButton"></i>
+              </li>
+            </div>
+       </ul>
+  </nav>
+  </div>
 
 
-                 </section> 
-    </nav>
+
+
     <div id="content"></div>
-
 
 </body>
 </html>
+

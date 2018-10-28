@@ -1,19 +1,89 @@
-<header><h3><b>Title: {{ title }}</b></h3></header>
+<!-- template for Video Information Page(in detail ) -->  
 
-<a href="#video/{{ id }}/videoplay">
-<img src="{{ iconURL }}" width="100px"/>
-</a>
-<div id= "data">
-<p><b>Location:</b> {{ location }}</p>
-<p><b>Date:</b> {{ date }} </p> 
-<p><b>Language:</b> {{ language }} </p>
-<p><b>Director:</b> {{ director }} </p>
-<p><b>Topic:</b> {{ topic }} </p>
-<p><b>Summary:</b> {{{ summary }}} </p>
-<p><b>License:</b> {{{ license }}} </p>
-<p><b>Source:</b> {{ source }} </p>
-<p><b>Project:</b> {{ project }} </p>
+<div id="pad">
+
+<div class="row">
+<div class="large-2 small-4 columns" id="video-icons">
+	<a href="#video/{{ id }}/videoplay">
+	<img src="{{ iconURL }}" width="300px"/>
+	</a><br /><br />
+
+	<div><a href="#video/{{ id }}/videoplay"><i class="fi-play-video icon-style"></i></a></div>	
+
+	<div><a href="#video/{{ id }}/layers/transcripts"><span class="radius label"> Transcripts </span></a></div>
+	
+	<div><a href="#video/{{ id }}/layers/descriptions"><span class="radius label"> Descriptions </span></a></div>
 </div>
 
 
 
+
+<!-- template for Video info page  with Project,Topic,Location,Date,Language,Director,Summary show not available if detail not found -->  
+ <div class="large-10 small-8 columns">	
+	<div id= "data">
+		<div class="panel radius">
+		<a href="#video/{{ id }}/videoplay" class="main-links">
+		<span class="sub-headings">Title : </span>{{ title }}</a></br></br>
+          
+
+
+		<span class="sub-headings">Project :</span> 
+				{{#if project }} 
+					{{ project }}
+										{{ else }} 
+							Not available  
+				{{/if}}</br></br>
+
+		<span class="sub-headings">Topic :</span> 
+					{{#if topic }} 
+							{{ topic }}	
+						{{ else }} 
+							Not available  
+					{{/if}}</br></br>
+
+		<span class="sub-headings">Location :</span> 
+					{{#if location }} 
+					{{ location }}		
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<span class="sub-headings">Date :</span> 
+					{{#if date }}                           
+						{{ date }}	
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<span class="sub-headings">Language :</span> 
+					{{#if language }} 
+						{{ language }}		
+						{{ else }} 
+								Not available  
+					{{/if}}</br></br>
+
+		<span class="sub-headings">Director :</span>
+						{{#if director }} 
+						{{ director }}		
+								{{ else }} 
+									Not available  
+						{{/if}}</br></br>
+
+		<span class="sub-headings">Summary :</span>
+					{{#if summary }} 
+							{{{ summary }}}
+							{{ else }}
+								Not available  
+					{{/if}}</br></br>
+
+		<span class="sub-headings">Link : </span><a target="_blank" href="{{ shareURL }}">{{ shareURL }}</a>
+	</div>				
+	</div>
+
+</div>
+
+</div>
+
+</div>
+
+</br>

@@ -1,0 +1,19 @@
+<div class="paginationInfo">
+    Total results: {{ count }}
+    Displaying results {{ start }} - {{ end }}
+    {{#if prev }}
+        <a href="#search/{{ queryString }}/{{ prev }}">Prev</a>
+    {{/if }}
+    {{ page }}
+    {{#if next }}
+        <a href="#search/{{ queryString }}/{{ next }}">Next</a>
+    {{/if }}
+</div>
+<div class="searchedFor">
+	Results for {{ queryString }}
+</div>
+<div class="videosList">
+
+</div>
+
+<!-- template -Search Video page with Pagination -->  

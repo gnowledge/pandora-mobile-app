@@ -1,0 +1,95 @@
+	body {
+		background-color: #ffffcc;
+	}
+
+    h3{
+        font: 20px bold Tahoma;
+    }
+    
+    img{
+        border:1px solid #;
+        border-radius: 15px;
+        /* box-shadow: gray 8px 8px 8px; */
+    }
+
+    .icon-style{
+        color: rgb(163, 102, 90); 
+        font-size: 2em;
+    }
+
+    .top-bar input, .top-bar .button {
+        font-size: 0.875rem;
+        position: relative;
+        top: 4px;
+    }
+
+    #searchInput:focus{
+        border-color: #6EA2DE;
+    }
+
+    #video-icons{
+        padding-top: 20px;
+    }
+    .label{
+        font-weight: bolder;
+    }
+    .title{
+        font-size: 20px;
+    }
+
+    .label{
+        background-color: rgb(240, 65, 36);
+    }
+
+    .main-links{
+        color: black;
+    }
+    .sub-links{
+        color:orange;
+    }
+
+
+    .headings {
+        color: #333;
+        font-size: 20px;
+    }
+
+    .sub-headings {
+        color: orange;
+
+        font-size: 15px;
+    }
+
+    .side-nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+	.paginationInfo {
+		color: #666;
+	}
+
+	.transValue {
+		margin-bottom: 8px;
+	}
+
+	.transMeta {
+		font-size: 12px;
+		font-style: italic;
+		color: #666;
+	}
+
+	b {
+		font-weight: normal !important;
+	}
+
+	.videoItem .label {
+		margin-top: 3px;
+	}
+
+	.videoButtons {
+		text-align: center;
+	}
+.panel{
+    background-color: #F2F2F2;
+}
